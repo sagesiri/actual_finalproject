@@ -59,3 +59,8 @@ equality$country <- str_remove_all(equality$country, "[\\d\\d. ]")
 studyabroad <- clean_names(studyabroad)
 ```
 
+
+```{r}
+studyabroad <- separate_rows(studyabroad, country, sep = "\n")
+```
+
