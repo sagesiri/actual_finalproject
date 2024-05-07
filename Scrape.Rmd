@@ -71,3 +71,7 @@ equality$public_opinion_index <- str_replace_all(equality$public_opinion_index, 
 equality$country <- str_remove_all(equality$country, "[\\d\\d.]")
 ```
 
+```{r}
+clean_names(studyabroad)
+```
+
