@@ -56,6 +56,6 @@ equality$country <- str_remove_all(equality$country, "[\\d\\d. ]")
 ```
 
 ```{r}
-clean_names(studyabroad)
+studyabroad <- clean_names(studyabroad)
 ```
 
