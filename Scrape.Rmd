@@ -53,6 +53,7 @@ studyabroad$Country <- str_replace_all(studyabroad$Country, "(\t){1,}", "")
 equality <- clean_names(equality)
 equality$public_opinion_index <- str_replace_all(equality$public_opinion_index, "â.", "NA")
 equality$country <- str_remove_all(equality$country, "[\\d\\d. ]")
+str_replace_all(equality$country, "([a-z]+)([A-Z])", "\\1 \\2")
 ```
 
 ```{r}
