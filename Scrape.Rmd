@@ -58,5 +58,8 @@ studyabroad <- html_table(tables3, header = TRUE, fill = TRUE)[[1]]
 ```{r}
 #cleaning
 
+studyabroad$City <- str_replace_all(studyabroad$City, "(\t){1,}", "")
+
+studyabroad$Country <- str_replace_all(studyabroad$Country, "(\t){1,}", "")
 ```
 
