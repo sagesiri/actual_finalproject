@@ -42,14 +42,15 @@ studyabroad <- html_table(tables3, header = TRUE, fill = TRUE)[[1]]
 ```
 
 ```{r}
-#cleaning
-
-studyabroad$City <- str_replace_all(studyabroad$City, "(\t){1,}", "")
-
-studyabroad$Country <- str_replace_all(studyabroad$Country, "(\t){1,}", "")
+#studyabroad cleaning
+studyabroad <- clean_names(studyabroad)
+studyabroad$city <- str_replace_all(studyabroad$city, "(\t){1,}", "")
+studyabroad$country <- str_replace_all(studyabroad$country, "(\t){1,}", "")
+studyabroad$save_share<- ifelse(studyabroad$save_share == "Save this program", "J-term", "Semester")
 ```
 
 ```{r}
+#equality equality
 equality <- clean_names(equality)
 equality$public_opinion_index <- str_replace_all(equality$public_opinion_index, "â.", "NA")
 equality$country <- str_remove_all(equality$country, "[\\d\\d. ]")
