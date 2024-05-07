@@ -64,3 +64,9 @@ studyabroad <- clean_names(studyabroad)
 studyabroad <- separate_rows(studyabroad, country, sep = "\n")
 ```
 
+```{r}
+studyabroad <- studyabroad |>
+  mutate(save_share = ifelse(save_share == "", FALSE, TRUE)) |>
+  rename(interim = save_share)
+```
+
