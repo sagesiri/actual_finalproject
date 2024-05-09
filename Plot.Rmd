@@ -1,0 +1,77 @@
+---
+title: "Scrape"
+author: "Cole Monson"
+date: "2024-05-08"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+
+
+library(tidyverse)
+
+
+studyabroad <- read_csv("studyabroad.csv") |> select(-`...1`)
+
+```
+
+```{r eruptions, echo=FALSE}
+inputPanel(
+  selectInput("n_breaks", label = "Number of bins:",
+              choices = c(10, 20, 35, 50), selected = 20),
+  
+  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+              min = 0.2, max = 2, value = 1, step = 0.2)
+)
+
+renderPlot({
+  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
+       xlab = "Duration (minutes)", main = "Geyser eruption duration")
+  
+  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
+  lines(dens, col = "blue")
+})
+```
+
+```{r, eval=FALSE}
+# play zone! Here we try to replicate initial plot using ggplot
+
+
+
+
+```
+
+```{r}
+inputPanel(
+  selectInput("num_breaks", label = "Number of bins:",
+              choices = c(10, 20, 35, 50, 10000), selected = 20),
+  
+  sliderInput("bandwidth_adjust", label = "Bandwidth adjustment:",
+              min = 0.01, max = 2, value = 1, step = 0.2)
+)
+
+renderPlot(faithful |>
+  ggplot(aes(x=eruptions, y=..density..)) +
+  geom_histogram(bins = as.numeric(input$num_breaks), color = "black", fill = "gray") +
+  geom_density(color = "blue", bw = input$bandwidth_adjust) +
+    labs(x = "Duration (minutes)", y = "Geyser Eruption Duration"))
+```
+
+```{r}
+
+  studyabroad |>
+  group_by(country) |>
+  summarize(n = n()) |>
+  mutate(country = fct_reorder(country, n)) |>
+  slice_max(country, n = 10) |>
+  ggplot(aes(x = country, y = n)) +
+  geom_col(fill = "red") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Offered Destinations")
+
+```
+
+
