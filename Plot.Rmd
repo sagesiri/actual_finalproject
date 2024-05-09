@@ -10,7 +10,7 @@ runtime: shiny
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
 
-
+library(mdsr)
 library(tidyverse)
 
 
@@ -46,18 +46,20 @@ renderPlot({
 
 ```{r}
 inputPanel(
-  selectInput("num_breaks", label = "Number of bins:",
-              choices = c(10, 20, 35, 50, 10000), selected = 20),
   
-  sliderInput("bandwidth_adjust", label = "Bandwidth adjustment:",
-              min = 0.01, max = 2, value = 1, step = 0.2)
+  sliderInput("num_adjust", label = "Number of Countries:",
+              min = 5, max = 20, value = 1, step = 1)
 )
 
-renderPlot(faithful |>
-  ggplot(aes(x=eruptions, y=..density..)) +
-  geom_histogram(bins = as.numeric(input$num_breaks), color = "black", fill = "gray") +
-  geom_density(color = "blue", bw = input$bandwidth_adjust) +
-    labs(x = "Duration (minutes)", y = "Geyser Eruption Duration"))
+renderPlot(studyabroad |>
+  group_by(country) |>
+  summarize(n = n()) |>
+  mutate(country = fct_reorder(country, n)) |>
+  slice_max(country, n = as.numeric(input$num_adjust)) |>
+  ggplot(aes(x = country, y = n)) +
+  geom_col(fill = "red") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Offered Destinations"))
 ```
 
 ```{r}
@@ -73,5 +75,33 @@ renderPlot(faithful |>
   labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Offered Destinations")
 
 ```
+
+```{r}
+studyabroad |>
+  # we won't use mWorldMap often, but it's a good quick illustration
+  mosaic::mWorldMap(key = "country") +
+  geom_polygon(aes(fill = equality_index), color = "black") + 
+  #scale_fill_brewer("Oil Prod. (bbl/day)", na.value = "white") +
+  theme(legend.position = "top")
+```
+
+```{r}
+library(tidyverse)
+library(highcharter)
+
+data(worldgeojson, package = "highcharter")
+
+hc <- highchart() %>%
+  hc_add_series_map(
+    worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
+    name = "equality_index"
+    )  %>% 
+  hc_colorAxis(stops = color_stops()) %>% 
+  hc_title(text = "World Map") %>% 
+  hc_subtitle(text = "Life Expectancy in 2015")
+
+hc
+```
+
 
 
