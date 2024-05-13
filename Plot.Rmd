@@ -74,4 +74,55 @@ renderPlot(faithful |>
 
 ```
 
+```{r}
+library(shiny)
+library(leaflet)
+
+r_colors <- rgb(t(col2rgb(colors()) / 255))
+names(r_colors) <- colors()
+
+ui <- fluidPage(
+  leafletOutput("mymap"),
+  p(),
+  actionButton("recalc", "New points")
+)
+
+server <- function(input, output, session) {
+
+  points <- eventReactive(input$recalc, {
+    cbind(rnorm(40) * 2 + 13, rnorm(40) + 48)
+  }, ignoreNULL = FALSE)
+
+  output$mymap <- renderLeaflet({
+    leaflet() %>%
+      addProviderTiles(providers$Stadia.StamenTonerLite,
+        options = providerTileOptions(noWrap = TRUE)
+      ) %>%
+      addMarkers(data = points())
+  })
+}
+
+shinyApp(ui, server)
+```
+
+```{r}
+library(tidyverse)
+library(highcharter)
+
+options(highcharter.theme = hc_theme_smpl(tooltip = list(valueDecimals = 2)))
+
+data(worldgeojson, package = "highcharter")
+
+hc <- highchart() %>%
+  hc_add_series_map(
+    worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
+    name = "LifeExpectancy"
+    )  %>% 
+  hc_colorAxis(stops = color_stops()) %>% 
+  hc_title(text = "World Map") %>% 
+  hc_subtitle(text = "Life Expectancy in 2015")
+
+hc
+
+```
 
