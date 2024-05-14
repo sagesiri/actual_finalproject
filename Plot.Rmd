@@ -9,13 +9,13 @@ runtime: shiny
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
-<<<<<<< HEAD
+
 library(shiny)
 library(DT)
-=======
+
 
 library(mdsr)
->>>>>>> 192c39924d53426f6d2e47d107e9b0cb439712fb
+
 library(tidyverse)
 
 
