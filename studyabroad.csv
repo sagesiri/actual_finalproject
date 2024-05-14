@@ -1,650 +1,146 @@
-"","program_name","city","country","region","interim","equality_index","legal_index","public_opinion_index"
-"1","American University in Cairo, Egypt","Cairo","Egypt","Middle East",TRUE,14,12,"16"
-"2","Arts and Sciences in Legon, Ghana","Legon","Ghana","Africa",TRUE,7,5,"9"
-"3","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Cape Town
-Windhoek","South Africa","Africa
-									Africa",TRUE,71,84,"58"
-"4","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Cape Town
-Windhoek","Namibia","Africa
-									Africa",TRUE,41,48,"34"
-"5","Augsburg CGEE: Social Change in Central America: New Activisms, Human Rights and Social Justice","Panajachel
-San Jose","Guatemala","Central America
-									Central America",TRUE,39,50,"29"
-"6","Augsburg CGEE: Social Change in Central America: New Activisms, Human Rights and Social Justice","Panajachel
-San Jose","Costa Rica","Central America
-									Central America",TRUE,68,86,"49"
-"7","Augsburg CGEE: Social Work in a Latin American Context","Cuernavaca","Mexico","North America",TRUE,75,93,"57"
-"8","Augsburg CGEE: Student Teaching in Mexico","Cuernavaca","Mexico","North America",TRUE,75,93,"57"
-"9","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Derry
-Londonderry","United Kingdom","Europe
-									Europe",TRUE,71,80,"61"
-"10","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Derry
-Londonderry","United Kingdom","Europe
-									Europe",TRUE,71,80,"61"
-"11","Barcelona SAE: Academic Study Center (SIS) Semester Program","Barcelona","Spain","Europe",TRUE,81,93,"69"
-"12","Barcelona SAE: Academic Study Center (SIS) Semester Program with Internship","Barcelona","Spain","Europe",TRUE,81,93,"69"
-"13","Budapest Semesters in Mathematics","Budapest","Hungary","Europe",TRUE,55,67,"43"
-"14","Budapest Semesters in Mathematics Education","Budapest","Hungary","Europe",TRUE,55,67,"43"
-"15","Carleton Global Engagement: Ecology and Anthropology in Tanzania","Arusha","Tanzania","Africa",TRUE,13,8,"18"
-"16","CEA CAPA: Study and Intern in Sydney","Sydney","Australia","Oceania",TRUE,77,90,"64"
-"17","CEA CAPA: University of Technology Sydney","Sydney","Australia","Oceania",TRUE,77,90,"64"
-"18","CET Colombia: Study Abroad","Cali","Colombia","South America",TRUE,75,98,"52"
-"19","Chicago Semester: Student Teaching and Seminar","Chicago, Illinois","United States","North America",TRUE,74,86,"62"
-"20","CIEE Arts and Sciences Program in Cape Town, South Africa","Cape Town","South Africa","Africa",TRUE,71,84,"58"
-"21","CIEE Liberal Arts Program in Rennes, France","Rennes","France","Europe",TRUE,75,90,"61"
-"22","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"23","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"24","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"25","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"26","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"27","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"28","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"29","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"30","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"31","Classical Studies in Greece","Archaia Olympia
-Athens
-Delphi
-Heraklion
-Kalabaka
-Nafplion
-Pilos
-Piraeus
-Sparti
-Thessaloniki","Greece","Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,68,93,"43"
-"32","CMRS Oxford Humanities Program, Oxford, England","Oxford","United Kingdom","Europe",TRUE,71,80,"61"
-"33","College Year in Athens, Greece","Athens","Greece","Europe",TRUE,68,93,"43"
-"34","Curtin University, Perth, Australia","Perth","Australia","Australia",TRUE,77,90,"64"
-"35","Dance NOW/NY Interim Experience","New York City, New York","United States","North America",TRUE,74,86,"62"
-"36","DIS Copenhagen","Copenhagen","Denmark","Europe",TRUE,85,92,"79"
-"37","DIS Stockholm","Stockholm","Sweden","Europe",TRUE,75,80,"69"
-"38","Encountering China: Shanghai","Hangzhou
-Nanjing
-Shanghai","China","Asia
-									Asia
-									Asia",TRUE,48,51,"45"
-"39","Encountering China: Shanghai","Hangzhou
-Nanjing
-Shanghai","China","Asia
-									Asia
-									Asia",TRUE,48,51,"45"
-"40","Encountering China: Shanghai","Hangzhou
-Nanjing
-Shanghai","China","Asia
-									Asia
-									Asia",TRUE,48,51,"45"
-"41","Encountering Japan: Tokyo","Hiroshima
-Tokyo","Japan","Asia
-									Asia",TRUE,65,74,"56"
-"42","Encountering Japan: Tokyo","Hiroshima
-Tokyo","Japan","Asia
-									Asia",TRUE,65,74,"56"
-"43","Environmental Science in Australia and New Zealand","Auckland
-Brisbane
-Melbourne
-Rotorua
-Sydney
-Wellington","New Zealand","Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania",TRUE,79,94,"64"
-"44","Environmental Science in Australia and New Zealand","Auckland
-Brisbane
-Melbourne
-Rotorua
-Sydney
-Wellington","Australia","Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania",TRUE,77,90,"64"
-"45","Environmental Science in Australia and New Zealand","Auckland
-Brisbane
-Melbourne
-Rotorua
-Sydney
-Wellington","Australia","Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania",TRUE,77,90,"64"
-"46","Environmental Science in Australia and New Zealand","Auckland
-Brisbane
-Melbourne
-Rotorua
-Sydney
-Wellington","New Zealand","Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania",TRUE,79,94,"64"
-"47","Environmental Science in Australia and New Zealand","Auckland
-Brisbane
-Melbourne
-Rotorua
-Sydney
-Wellington","Australia","Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania",TRUE,77,90,"64"
-"48","Environmental Science in Australia and New Zealand","Auckland
-Brisbane
-Melbourne
-Rotorua
-Sydney
-Wellington","New Zealand","Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania
-									Oceania",TRUE,79,94,"64"
-"49","Gender Equality in Norway","Bergen
-Oslo","Norway","Europe
-									Europe",TRUE,85,85,"85"
-"50","Gender Equality in Norway","Bergen
-Oslo","Norway","Europe
-									Europe",TRUE,85,85,"85"
-"51","Global Semester","Ho Chi Minh City
-Johannesburg
-Quito
-Windhoek","Vietnam","Asia
-									Africa
-									South America
-									Africa",TRUE,54,58,"49"
-"52","Global Semester","Ho Chi Minh City
-Johannesburg
-Quito
-Windhoek","South Africa","Asia
-									Africa
-									South America
-									Africa",TRUE,71,84,"58"
-"53","Global Semester","Ho Chi Minh City
-Johannesburg
-Quito
-Windhoek","Ecuador","Asia
-									Africa
-									South America
-									Africa",TRUE,58,78,"37"
-"54","Global Semester","Ho Chi Minh City
-Johannesburg
-Quito
-Windhoek","Namibia","Asia
-									Africa
-									South America
-									Africa",TRUE,41,48,"34"
-"55","Harris Manchester College, Oxford, England","Oxford","United Kingdom","Europe",TRUE,71,80,"61"
-"56","Hokusei Gakuen University Semester","Sapporo","Japan","Asia",TRUE,65,74,"56"
-"57","IES Abroad London - Health Practice & Policy","London","United Kingdom","Europe",TRUE,71,80,"61"
-"58","IES Abroad London - Study London","London","United Kingdom","Europe",TRUE,71,80,"61"
-"59","IES Abroad London - Theater Studies","London","United Kingdom","Europe",TRUE,71,80,"61"
-"60","IES Abroad London Direct Enrollment – Queen Mary, University of London","London","United Kingdom","Europe",TRUE,71,80,"61"
-"61","IES Abroad Milan - Business Studies","Milan","Italy","Europe",TRUE,69,77,"61"
-"62","IES Abroad Milan - Fashion Design & Merchandising","Milan","Italy","Europe",TRUE,69,77,"61"
-"63","IES Abroad Milan - Italy Today","Milan","Italy","Europe",TRUE,69,77,"61"
-"64","IES Abroad Milan - Music: Voice, Composition & Instrumental","Milan","Italy","Europe",TRUE,69,77,"61"
-"65","IES Abroad Paris - French Studies","Paris","France","Europe",TRUE,75,90,"61"
-"66","IES Advanced Spanish Immersion, Buenos Aires, Argentina","Buenos Aires","Argentina","Latin America",TRUE,74,87,"61"
-"67","IES Latin American Societies and Cultures, Buenos Aires, Argentina","Buenos Aires","Argentina","Latin America",TRUE,74,87,"61"
-"68","Interdisciplinary French Studies in Paris","Paris","France","Europe",TRUE,75,90,"61"
-"69","Japan Studies, Waseda University, Tokyo, Japan","Tokyo","Japan","Asia",TRUE,65,74,"56"
-"70","Lancaster University, England","Lancaster","United Kingdom","Europe",TRUE,71,80,"61"
-"71","Liberal Arts Program, Seville, Spain","Seville","Spain","Europe",TRUE,81,93,"69"
-"72","Living Faith: Theology and Practice at Holden Village","Chelan, Washington","United States","North America",TRUE,74,86,"62"
-"73","London School of Economics and Political Science, London, England","London","United Kingdom","Europe",TRUE,71,80,"61"
-"74","Lutheran College Washington Semester","Washington, D.C.","United States","North America",TRUE,74,86,"62"
-"75","Marine Ecology Research in Jamaica","Discovery Bay","Jamaica","The Caribbean",TRUE,26,34,"18"
-"76","Middlebury in Mainz, Germany","Mainz","Germany","Europe",TRUE,80,95,"64"
-"77","Middlebury in Yaoundé, Cameroon","Yaounde","Cameroon","Africa",TRUE,9,6,"11"
-"78","National Student Exchange (NSE): Canada","Various Cities","Canada","North America",TRUE,81,95,"66"
-"79","National Student Exchange (NSE): U.S. and Territories","Various Cities","United States","North America",TRUE,74,86,"62"
-"80","Number Theory - Budapest","Budapest","Hungary","Europe",TRUE,55,67,"43"
-"81","NUPACE Program, Nagoya, Japan","Nagoya","Japan","Asia",TRUE,65,74,"56"
-"82","O'Keeffe and Arts of New Mexico","Abiquiu
-Albuquerque
-Santa Fe
-Taos","United States","North America
-									North America
-									North America
-									North America",TRUE,74,86,"62"
-"83","O'Keeffe and Arts of New Mexico","Abiquiu
-Albuquerque
-Santa Fe
-Taos","United States","North America
-									North America
-									North America
-									North America",TRUE,74,86,"62"
-"84","O'Keeffe and Arts of New Mexico","Abiquiu
-Albuquerque
-Santa Fe
-Taos","United States","North America
-									North America
-									North America
-									North America",TRUE,74,86,"62"
-"85","O'Keeffe and Arts of New Mexico","Abiquiu
-Albuquerque
-Santa Fe
-Taos","United States","North America
-									North America
-									North America
-									North America",TRUE,74,86,"62"
-"86","Oregon Extension, Ashland, OR","Ashland, Oregon","United States","North America",TRUE,74,86,"62"
-"87","Oslo International Summer School, Norway","Oslo","Norway","Europe",TRUE,85,85,"85"
-"88","Perspectives on Flamenco in Spain","Cordoba
-Granada
-Madrid
-Seville","Spain","Europe
-									Europe
-									Europe
-									Europe",TRUE,81,93,"69"
-"89","Perspectives on Flamenco in Spain","Cordoba
-Granada
-Madrid
-Seville","Spain","Europe
-									Europe
-									Europe
-									Europe",TRUE,81,93,"69"
-"90","Perspectives on Flamenco in Spain","Cordoba
-Granada
-Madrid
-Seville","Spain","Europe
-									Europe
-									Europe
-									Europe",TRUE,81,93,"69"
-"91","Perspectives on Flamenco in Spain","Cordoba
-Granada
-Madrid
-Seville","Spain","Europe
-									Europe
-									Europe
-									Europe",TRUE,81,93,"69"
-"92","Politics and Environment in Puerto Rico","Lajas
-Ponce
-San Juan","Puerto Rico","North America
-									Caribbean
-									Caribbean",TRUE,NA,NA,NA
-"93","Politics and Environment in Puerto Rico","Lajas
-Ponce
-San Juan","Puerto Rico","North America
-									Caribbean
-									Caribbean",TRUE,NA,NA,NA
-"94","Politics and Environment in Puerto Rico","Lajas
-Ponce
-San Juan","Puerto Rico","North America
-									Caribbean
-									Caribbean",TRUE,NA,NA,NA
-"95","Reformations in Germany and Spain","Barcelona
-Berlin
-Granada
-Madrid
-Wittenberg","Spain","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,81,93,"69"
-"96","Reformations in Germany and Spain","Barcelona
-Berlin
-Granada
-Madrid
-Wittenberg","Germany","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,80,95,"64"
-"97","Reformations in Germany and Spain","Barcelona
-Berlin
-Granada
-Madrid
-Wittenberg","Spain","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,81,93,"69"
-"98","Reformations in Germany and Spain","Barcelona
-Berlin
-Granada
-Madrid
-Wittenberg","Spain","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,81,93,"69"
-"99","Reformations in Germany and Spain","Barcelona
-Berlin
-Granada
-Madrid
-Wittenberg","Germany","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,80,95,"64"
-"100","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Flensburg
-Hamburg","Germany","Europe
-									Europe",TRUE,80,95,"64"
-"101","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Flensburg
-Hamburg","Germany","Europe
-									Europe",TRUE,80,95,"64"
-"102","SIT Kenya: Global Health and Human Rights","Kisumu","Kenya","Africa",TRUE,21,25,"17"
-"103","SIT Mexico: Migration, Borders, and Transnational Communities","Oaxaca
-Tucson","Mexico","North America
-									North America",TRUE,75,93,"57"
-"104","SIT Mexico: Migration, Borders, and Transnational Communities","Oaxaca
-Tucson","United States","North America
-									North America",TRUE,74,86,"62"
-"105","Soccer in England","Liverpool
-London
-Manchester","United Kingdom","Europe
-									Europe
-									Europe",TRUE,71,80,"61"
-"106","Soccer in England","Liverpool
-London
-Manchester","United Kingdom","Europe
-									Europe
-									Europe",TRUE,71,80,"61"
-"107","Soccer in England","Liverpool
-London
-Manchester","United Kingdom","Europe
-									Europe
-									Europe",TRUE,71,80,"61"
-"108","Social Issues in South Africa","Cape Town
-Johannesburg","South Africa","Africa
-									Africa",TRUE,71,84,"58"
-"109","Social Issues in South Africa","Cape Town
-Johannesburg","South Africa","Africa
-									Africa",TRUE,71,84,"58"
-"110","SRAS: Russian as a Second Language, Georgia","Tbilisi","Georgia","Europe",TRUE,39,67,"12"
-"111","SRAS: Russian as a Second Language, Kyrgyzstan","Bishkek","Kyrgyzstan","Asia",TRUE,28,45,"12"
-"112","SRAS: Russian as a Second Language, Latvia","Riga","Latvia","Europe",TRUE,52,66,"38"
-"113","Student Teaching, Kodaikanal Int'l School, India","Kodaikanal","India","Asia",TRUE,60,65,"54"
-"114","Student Teaching, Woodstock Int'l School, India","Mussoorie","India","Asia",TRUE,60,65,"54"
-"115","Sustainable Land Use in Costa Rica","La Selva
-Monteverde
-San Jose","Costa Rica","Central America
-									Central America
-									Central America",TRUE,68,86,"49"
-"116","Sustainable Land Use in Costa Rica","La Selva
-Monteverde
-San Jose","Costa Rica","Central America
-									Central America
-									Central America",TRUE,68,86,"49"
-"117","Sustainable Land Use in Costa Rica","La Selva
-Monteverde
-San Jose","Costa Rica","Central America
-									Central America
-									Central America",TRUE,68,86,"49"
-"118","Term in China","Shanghai","China","Asia",TRUE,48,51,"45"
-"119","Term in Taiwan","Taipei","Taiwan","Asia",TRUE,66,85,"48"
-"120","The Journey North: Migrations To, From, and Within Norway","Bodo
-Oslo
-Snasa
-Stavanger
-Trondheim","Norway","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,85,85,"85"
-"121","The Journey North: Migrations To, From, and Within Norway","Bodo
-Oslo
-Snasa
-Stavanger
-Trondheim","Norway","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,85,85,"85"
-"122","The Journey North: Migrations To, From, and Within Norway","Bodo
-Oslo
-Snasa
-Stavanger
-Trondheim","Norway","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,85,85,"85"
-"123","The Journey North: Migrations To, From, and Within Norway","Bodo
-Oslo
-Snasa
-Stavanger
-Trondheim","Norway","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,85,85,"85"
-"124","The Journey North: Migrations To, From, and Within Norway","Bodo
-Oslo
-Snasa
-Stavanger
-Trondheim","Norway","Europe
-									Europe
-									Europe
-									Europe
-									Europe",TRUE,85,85,"85"
-"125","Theater in London","London
-Stratford-upon-Avon","United Kingdom","Europe
-									Europe",TRUE,71,80,"61"
-"126","Theater in London","London
-Stratford-upon-Avon","United Kingdom","Europe
-									Europe",TRUE,71,80,"61"
-"127","Trinity College, Dublin, Ireland","Dublin","Ireland","Europe",TRUE,74,86,"61"
-"128","University College Dublin, Ireland","Dublin","Ireland","Europe",TRUE,74,86,"61"
-"129","University of Aberdeen, Scotland","Aberdeen","United Kingdom","Europe",TRUE,71,80,"61"
-"130","University of Dundee, Scotland","Dundee","United Kingdom","Europe",TRUE,71,80,"61"
-"131","University of East Anglia, England","Norwich","United Kingdom","Europe",TRUE,71,80,"61"
-"132","University of Galway, Ireland","Galway","Ireland","Europe",TRUE,74,86,"61"
-"133","University of Konstanz, Germany","Konstanz","Germany","Europe",TRUE,80,95,"64"
-"134","University of Oslo, Norway","Oslo","Norway","Europe",TRUE,85,85,"85"
-"135","University of Otago, Dunedin, New Zealand","Dunedin","New Zealand","Oceania",TRUE,79,94,"64"
-"136","University of Southeastern Norway","Telemark","Norway","Europe",TRUE,85,85,"85"
-"137","Urban Schools and Communities","Northfield, MN
-Saint Paul","United States","North America
-									North America",TRUE,74,86,"62"
-"138","Urban Schools and Communities","Northfield, MN
-Saint Paul","United States","North America
-									North America",TRUE,74,86,"62"
-"139","Washington D.C. Politics and Intl Relations Practicum","Washington, D.C.","United States","North America",TRUE,74,86,"62"
-"140","Webster University in Vienna","Vienna","Austria","Europe",TRUE,77,93,"62"
-"141","World Courts in Europe","Geneva
-Luxembourg
-Strasbourg
-The Hague","Switzerland","Europe
-									Europe
-									Europe
-									Europe",TRUE,70,79,"60"
-"142","World Courts in Europe","Geneva
-Luxembourg
-Strasbourg
-The Hague","Luxembourg","Europe
-									Europe
-									Europe
-									Europe",TRUE,79,86,"73"
-"143","World Courts in Europe","Geneva
-Luxembourg
-Strasbourg
-The Hague","France","Europe
-									Europe
-									Europe
-									Europe",TRUE,75,90,"61"
-"144","World Courts in Europe","Geneva
-Luxembourg
-Strasbourg
-The Hague","Netherlands","Europe
-									Europe
-									Europe
-									Europe",TRUE,80,90,"70"
-"145","Yonsei University, Seoul, South Korea","Seoul","South Korea","Asia",TRUE,46,48,"45"
+"","program_name","city","country","region","equality_index","legal_index","public_opinion_index"
+"1","American University in Cairo, Egypt","Cairo","Egypt","Middle East",14,12,"16"
+"2","Arts and Sciences in Legon, Ghana","Legon","Ghana","Africa",7,5,"9"
+"3","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Cape Town","South Africa","Africa",71,84,"58"
+"4","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Windhoek","Namibia","									Africa",41,48,"34"
+"5","Augsburg CGEE: Social Change in Central America: New Activisms, Human Rights and Social Justice","Panajachel","Guatemala","Central America",39,50,"29"
+"6","Augsburg CGEE: Social Change in Central America: New Activisms, Human Rights and Social Justice","San Jose","Costa Rica","									Central America",65,82,"49"
+"7","Augsburg CGEE: Social Work in a Latin American Context","Cuernavaca","Mexico","North America",75,93,"57"
+"8","Augsburg CGEE: Student Teaching in Mexico","Cuernavaca","Mexico","North America",75,93,"57"
+"9","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Derry","United Kingdom","Europe",71,80,"61"
+"10","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Londonderry","United Kingdom","									Europe",71,80,"61"
+"11","Barcelona SAE: Academic Study Center (SIS) Semester Program","Barcelona","Spain","Europe",81,93,"68"
+"12","Barcelona SAE: Academic Study Center (SIS) Semester Program with Internship","Barcelona","Spain","Europe",81,93,"68"
+"13","Budapest Semesters in Mathematics","Budapest","Hungary","Europe",55,67,"43"
+"14","Budapest Semesters in Mathematics Education","Budapest","Hungary","Europe",55,67,"43"
+"15","CEA CAPA: Study and Intern in Sydney","Sydney","Australia","Oceania",77,90,"64"
+"16","CEA CAPA: University of Technology Sydney","Sydney","Australia","Oceania",77,90,"64"
+"17","CET Colombia: Study Abroad","Cali","Colombia","South America",75,98,"52"
+"18","CIEE Arts and Sciences Program in Cape Town, South Africa","Cape Town","South Africa","Africa",71,84,"58"
+"19","CIEE Liberal Arts Program in Rennes, France","Rennes","France","Europe",75,90,"61"
+"20","CMRS Oxford Humanities Program, Oxford, England","Oxford","United Kingdom","Europe",71,80,"61"
+"21","Carleton Global Engagement: Ecology and Anthropology in Tanzania","Arusha","Tanzania","Africa",13,8,"18"
+"22","Chicago Semester: Student Teaching and Seminar","Chicago, Illinois","United States","North America",74,86,"62"
+"23","Classical Studies in Greece","Archaia Olympia","Greece","Europe",68,93,"43"
+"24","Classical Studies in Greece","Athens","Greece","									Europe",68,93,"43"
+"25","Classical Studies in Greece","Delphi","Greece","									Europe",68,93,"43"
+"26","Classical Studies in Greece","Heraklion","Greece","									Europe",68,93,"43"
+"27","Classical Studies in Greece","Kalabaka","Greece","									Europe",68,93,"43"
+"28","Classical Studies in Greece","Nafplion","Greece","									Europe",68,93,"43"
+"29","Classical Studies in Greece","Pilos","Greece","									Europe",68,93,"43"
+"30","Classical Studies in Greece","Piraeus","Greece","									Europe",68,93,"43"
+"31","Classical Studies in Greece","Sparti","Greece","									Europe",68,93,"43"
+"32","Classical Studies in Greece","Thessaloniki","Greece","									Europe",68,93,"43"
+"33","College Year in Athens, Greece","Athens","Greece","Europe",68,93,"43"
+"34","Curtin University, Perth, Australia","Perth","Australia","Australia",77,90,"64"
+"35","DIS Copenhagen","Copenhagen","Denmark","Europe",85,92,"79"
+"36","DIS Stockholm","Stockholm","Sweden","Europe",75,80,"69"
+"37","Dance NOW/NY Interim Experience","New York City, New York","United States","North America",74,86,"62"
+"38","Encountering China: Shanghai","Hangzhou","China","Asia",48,51,"45"
+"39","Encountering China: Shanghai","Nanjing","China","									Asia",48,51,"45"
+"40","Encountering China: Shanghai","Shanghai","China","									Asia",48,51,"45"
+"41","Encountering Japan: Tokyo","Hiroshima","Japan","Asia",63,70,"56"
+"42","Encountering Japan: Tokyo","Tokyo","Japan","									Asia",63,70,"56"
+"43","Environmental Science in Australia and New Zealand","Auckland","New Zealand","Oceania",79,94,"64"
+"44","Environmental Science in Australia and New Zealand","Brisbane","Australia","									Oceania",77,90,"64"
+"45","Environmental Science in Australia and New Zealand","Melbourne","Australia","									Oceania",77,90,"64"
+"46","Environmental Science in Australia and New Zealand","Rotorua","New Zealand","									Oceania",79,94,"64"
+"47","Environmental Science in Australia and New Zealand","Sydney","Australia","									Oceania",77,90,"64"
+"48","Environmental Science in Australia and New Zealand","Wellington","New Zealand","									Oceania",79,94,"64"
+"49","Gender Equality in Norway","Bergen","Norway","Europe",85,85,"85"
+"50","Gender Equality in Norway","Oslo","Norway","									Europe",85,85,"85"
+"51","Global Semester","Ho Chi Minh City","Vietnam","Asia",54,58,"49"
+"52","Global Semester","Johannesburg","South Africa","									Africa",71,84,"58"
+"53","Global Semester","Quito","Ecuador","									South America",58,78,"37"
+"54","Global Semester","Windhoek","Namibia","									Africa",41,48,"34"
+"55","Harris Manchester College, Oxford, England","Oxford","United Kingdom","Europe",71,80,"61"
+"56","Hokusei Gakuen University Semester","Sapporo","Japan","Asia",63,70,"56"
+"57","IES Abroad London - Health Practice & Policy","London","United Kingdom","Europe",71,80,"61"
+"58","IES Abroad London - Study London","London","United Kingdom","Europe",71,80,"61"
+"59","IES Abroad London - Theater Studies","London","United Kingdom","Europe",71,80,"61"
+"60","IES Abroad London Direct Enrollment – Queen Mary, University of London","London","United Kingdom","Europe",71,80,"61"
+"61","IES Abroad Milan - Business Studies","Milan","Italy","Europe",70,79,"61"
+"62","IES Abroad Milan - Fashion Design & Merchandising","Milan","Italy","Europe",70,79,"61"
+"63","IES Abroad Milan - Italy Today","Milan","Italy","Europe",70,79,"61"
+"64","IES Abroad Milan - Music: Voice, Composition & Instrumental","Milan","Italy","Europe",70,79,"61"
+"65","IES Abroad Paris - French Studies","Paris","France","Europe",75,90,"61"
+"66","IES Advanced Spanish Immersion, Buenos Aires, Argentina","Buenos Aires","Argentina","Latin America",74,87,"61"
+"67","IES Latin American Societies and Cultures, Buenos Aires, Argentina","Buenos Aires","Argentina","Latin America",74,87,"61"
+"68","Interdisciplinary French Studies in Paris","Paris","France","Europe",75,90,"61"
+"69","Japan Studies, Waseda University, Tokyo, Japan","Tokyo","Japan","Asia",63,70,"56"
+"70","Lancaster University, England","Lancaster","United Kingdom","Europe",71,80,"61"
+"71","Liberal Arts Program, Seville, Spain","Seville","Spain","Europe",81,93,"68"
+"72","Living Faith: Theology and Practice at Holden Village","Chelan, Washington","United States","North America",74,86,"62"
+"73","London School of Economics and Political Science, London, England","London","United Kingdom","Europe",71,80,"61"
+"74","Lutheran College Washington Semester","Washington, D.C.","United States","North America",74,86,"62"
+"75","Marine Ecology Research in Jamaica","Discovery Bay","Jamaica","The Caribbean",26,34,"18"
+"76","Middlebury in Mainz, Germany","Mainz","Germany","Europe",80,95,"64"
+"77","Middlebury in Yaoundé, Cameroon","Yaounde","Cameroon","Africa",8,6,"11"
+"78","NUPACE Program, Nagoya, Japan","Nagoya","Japan","Asia",63,70,"56"
+"79","National Student Exchange (NSE): Canada","Various Cities","Canada","North America",81,95,"66"
+"80","National Student Exchange (NSE): U.S. and Territories","Various Cities","United States","North America",74,86,"62"
+"81","Number Theory - Budapest","Budapest","Hungary","Europe",55,67,"43"
+"82","O'Keeffe and Arts of New Mexico","Abiquiu","United States","North America",74,86,"62"
+"83","O'Keeffe and Arts of New Mexico","Albuquerque","United States","									North America",74,86,"62"
+"84","O'Keeffe and Arts of New Mexico","Santa Fe","United States","									North America",74,86,"62"
+"85","O'Keeffe and Arts of New Mexico","Taos","United States","									North America",74,86,"62"
+"86","Oregon Extension, Ashland, OR","Ashland, Oregon","United States","North America",74,86,"62"
+"87","Oslo International Summer School, Norway","Oslo","Norway","Europe",85,85,"85"
+"88","Perspectives on Flamenco in Spain","Cordoba","Spain","Europe",81,93,"68"
+"89","Perspectives on Flamenco in Spain","Granada","Spain","									Europe",81,93,"68"
+"90","Perspectives on Flamenco in Spain","Madrid","Spain","									Europe",81,93,"68"
+"91","Perspectives on Flamenco in Spain","Seville","Spain","									Europe",81,93,"68"
+"92","Politics and Environment in Puerto Rico","Lajas","Puerto Rico","North America",NA,NA,NA
+"93","Politics and Environment in Puerto Rico","Ponce","Puerto Rico","									Caribbean",NA,NA,NA
+"94","Politics and Environment in Puerto Rico","San Juan","Puerto Rico","									Caribbean",NA,NA,NA
+"95","Reformations in Germany and Spain","Barcelona","Spain","Europe",81,93,"68"
+"96","Reformations in Germany and Spain","Berlin","Germany","									Europe",80,95,"64"
+"97","Reformations in Germany and Spain","Granada","Spain","									Europe",81,93,"68"
+"98","Reformations in Germany and Spain","Madrid","Spain","									Europe",81,93,"68"
+"99","Reformations in Germany and Spain","Wittenberg","Germany","									Europe",80,95,"64"
+"100","SIT Kenya: Global Health and Human Rights","Kisumu","Kenya","Africa",21,25,"17"
+"101","SIT Mexico: Migration, Borders, and Transnational Communities","Oaxaca","Mexico","North America",75,93,"57"
+"102","SIT Mexico: Migration, Borders, and Transnational Communities","Tucson","United States","									North America",74,86,"62"
+"103","SRAS: Russian as a Second Language, Georgia","Tbilisi","Georgia","Europe",39,67,"12"
+"104","SRAS: Russian as a Second Language, Kyrgyzstan","Bishkek","Kyrgyzstan","Asia",28,45,"12"
+"105","SRAS: Russian as a Second Language, Latvia","Riga","Latvia","Europe",52,66,"38"
+"106","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Flensburg","Germany","Europe",80,95,"64"
+"107","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Hamburg","Germany","									Europe",80,95,"64"
+"108","Soccer in England","Liverpool","United Kingdom","Europe",71,80,"61"
+"109","Soccer in England","London","United Kingdom","									Europe",71,80,"61"
+"110","Soccer in England","Manchester","United Kingdom","									Europe",71,80,"61"
+"111","Social Issues in South Africa","Cape Town","South Africa","Africa",71,84,"58"
+"112","Social Issues in South Africa","Johannesburg","South Africa","									Africa",71,84,"58"
+"113","Student Teaching, Kodaikanal Int'l School, India","Kodaikanal","India","Asia",60,65,"54"
+"114","Student Teaching, Woodstock Int'l School, India","Mussoorie","India","Asia",60,65,"54"
+"115","Sustainable Land Use in Costa Rica","La Selva","Costa Rica","Central America",65,82,"49"
+"116","Sustainable Land Use in Costa Rica","Monteverde","Costa Rica","									Central America",65,82,"49"
+"117","Sustainable Land Use in Costa Rica","San Jose","Costa Rica","									Central America",65,82,"49"
+"118","Term in China","Shanghai","China","Asia",48,51,"45"
+"119","Term in Taiwan","Taipei","Taiwan","Asia",66,85,"48"
+"120","The Journey North: Migrations To, From, and Within Norway","Bodo","Norway","Europe",85,85,"85"
+"121","The Journey North: Migrations To, From, and Within Norway","Oslo","Norway","									Europe",85,85,"85"
+"122","The Journey North: Migrations To, From, and Within Norway","Snasa","Norway","									Europe",85,85,"85"
+"123","The Journey North: Migrations To, From, and Within Norway","Stavanger","Norway","									Europe",85,85,"85"
+"124","The Journey North: Migrations To, From, and Within Norway","Trondheim","Norway","									Europe",85,85,"85"
+"125","Theater in London","London","United Kingdom","Europe",71,80,"61"
+"126","Theater in London","Stratford-upon-Avon","United Kingdom","									Europe",71,80,"61"
+"127","Trinity College, Dublin, Ireland","Dublin","Ireland","Europe",74,86,"61"
+"128","University College Dublin, Ireland","Dublin","Ireland","Europe",74,86,"61"
+"129","University of Aberdeen, Scotland","Aberdeen","United Kingdom","Europe",71,80,"61"
+"130","University of Dundee, Scotland","Dundee","United Kingdom","Europe",71,80,"61"
+"131","University of East Anglia, England","Norwich","United Kingdom","Europe",71,80,"61"
+"132","University of Galway, Ireland","Galway","Ireland","Europe",74,86,"61"
+"133","University of Konstanz, Germany","Konstanz","Germany","Europe",80,95,"64"
+"134","University of Oslo, Norway","Oslo","Norway","Europe",85,85,"85"
+"135","University of Otago, Dunedin, New Zealand","Dunedin","New Zealand","Oceania",79,94,"64"
+"136","University of Southeastern Norway","Telemark","Norway","Europe",85,85,"85"
+"137","Urban Schools and Communities","Northfield, MN","United States","North America",74,86,"62"
+"138","Urban Schools and Communities","Saint Paul","United States","									North America",74,86,"62"
+"139","Washington D.C. Politics and Intl Relations Practicum","Washington, D.C.","United States","North America",74,86,"62"
+"140","Webster University in Vienna","Vienna","Austria","Europe",77,93,"62"
+"141","World Courts in Europe","Geneva","Switzerland","Europe",68,75,"60"
+"142","World Courts in Europe","Luxembourg","Luxembourg","									Europe",77,82,"73"
+"143","World Courts in Europe","Strasbourg","France","									Europe",75,90,"61"
+"144","World Courts in Europe","The Hague","Netherlands","									Europe",80,90,"70"
+"145","Yonsei University, Seoul, South Korea","Seoul","South Korea","Asia",46,48,"45"

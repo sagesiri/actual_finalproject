@@ -9,8 +9,8 @@ runtime: shiny
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(ggplot2)
-
-
+library(shiny)
+library(DT)
 library(tidyverse)
 
 
@@ -61,7 +61,6 @@ renderPlot(faithful |>
 ```
 
 ```{r}
-
   studyabroad |>
   group_by(country) |>
   summarize(n = n()) |>
@@ -71,39 +70,8 @@ renderPlot(faithful |>
   geom_col(fill = "red") +
   theme(axis.text.x = element_text(angle = 90)) +
   labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Offered Destinations")
-
 ```
 
-```{r}
-library(shiny)
-library(leaflet)
-
-r_colors <- rgb(t(col2rgb(colors()) / 255))
-names(r_colors) <- colors()
-
-ui <- fluidPage(
-  leafletOutput("mymap"),
-  p(),
-  actionButton("recalc", "New points")
-)
-
-server <- function(input, output, session) {
-
-  points <- eventReactive(input$recalc, {
-    cbind(rnorm(40) * 2 + 13, rnorm(40) + 48)
-  }, ignoreNULL = FALSE)
-
-  output$mymap <- renderLeaflet({
-    leaflet() %>%
-      addProviderTiles(providers$Stadia.StamenTonerLite,
-        options = providerTileOptions(noWrap = TRUE)
-      ) %>%
-      addMarkers(data = points())
-  })
-}
-
-shinyApp(ui, server)
-```
 
 ```{r}
 library(tidyverse)
@@ -116,13 +84,42 @@ data(worldgeojson, package = "highcharter")
 hc <- highchart() %>%
   hc_add_series_map(
     worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
-    name = "LifeExpectancy"
+    name = "Equality Index"
     )  %>% 
   hc_colorAxis(stops = color_stops()) %>% 
-  hc_title(text = "World Map") %>% 
-  hc_subtitle(text = "Life Expectancy in 2015")
+  hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
+  hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
 
 hc
 
+```
+
+```{r}
+ui <- fluidPage(
+  titlePanel("Sortable Table"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("order_by", "Order by:", choices = c("Equality Index", "Legal Index", "Public Opinion Index")),
+       radioButtons("order_dir", "Order direction:", choices = c("Ascending", "Descending"))
+    ),
+    mainPanel(
+      DTOutput("table")
+    )
+  )
+)
+
+server <- function(input, output) {
+  output$table <- renderDT({
+    order_dir <- ifelse(input$order_dir == "Ascending", TRUE, FALSE)
+    ordered_indecies <- switch(input$order_by,
+                           "Equality Index" = studyabroad[order(studyabroad$equality_index), ],
+                           "Legal Index" = studyabroad[order(studyabroad$legal_index), ],
+                           "Public Opinion Index" = studyabroad[order(studyabroad$public_opinion_index), ])
+
+    datatable(ordered_indecies, options = list(ordering = TRUE))
+  })
+}
+
+shinyApp(ui = ui, server = server)
 ```
 
