@@ -38,7 +38,7 @@ Column {data-width = 200}
 -------------------------
 
 ```{r  fig.width = 6.5, fig.height = 5}
-include_graphics("IMG_3703.jpeg") 
+include_graphics("HungaryPic.png") 
 ```
 
 
