@@ -95,7 +95,16 @@ Equality Index
 <center>
 
 ```{r, echo=FALSE}
-
+renderPlot({
+highchart() %>%
+  hc_add_series_map(
+    worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
+    name = "Equality Index"
+    )  %>% 
+  hc_colorAxis(stops = color_stops()) %>% 
+  hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
+  hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
+})
 ```
 
 
