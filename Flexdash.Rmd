@@ -1,5 +1,5 @@
 ---
-title: "Flexdash"
+title: "Equality & Study Abroad"
 runtime: shiny
 output: 
   flexdashboard::flex_dashboard:
@@ -9,17 +9,7 @@ output:
 ```{r global, include=FALSE, message=FALSE}
 library(tidyverse)
 library(knitr)
-ames <- read_csv("AmesHousing.csv")
-ames <- ames %>%
-  rename(LotShape = `Lot Shape`,
-         LandSlope = `Land Slope`,
-         HouseStyle = `House Style`,
-         PavedDrive = `Paved Drive`,
-         LotArea = `Lot Area`,
-         OverallQual = `Overall Qual`,
-         YearBuilt = `Year Built`,
-         SqFtAboveGrd = `Gr Liv Area`,
-         Bedrooms = `Bedroom AbvGr`)
+studyabroad <- read_csv("studyabroad.csv")
 ```
 
 About
@@ -30,23 +20,25 @@ Column {data-width = 400}
 
 #### Authors
 
-Paul Roback
+Siri Sagedahl and Cole Monson
 
 #### Background Information
 
-We examine the data in the AmesHousing package to find determinants of housing prices in Ames, IA, based on sales from 2006 to 2010.  2930 houses and 80 variables are included.
+This past January, Cole and Siri went on a study abroad program to Budapest, Hungary. It was both of our first times studying abroad and it made us realize the complexities of traveling to another location for extended periods of time. Despite only living in Budapest for a month, the stark cultural differences were apparent in our daily lives. One of these differences between Minnesota and Budapest was the acceptance of LGBTQ+ identifying people. The conservative government limits general LGBTQ+ rights and the solitary social culture is far less accepting than the United States. As an LGBTQ+ identifying person, Siri had to look into this culture prior to traveling to Hungary. 
+
+This project is a way to make this research more accessible to LGBTQ+ students looking to study abroad. Knowing how the new culture you're being immersed into sees your identity is very important for students' overall well being while away. This app connects programs to acceptance indecies of accpetance levels, allowing students to explore the country's culture prior to committing to a program.
 
 #### Data Sources
 
-+ Data from R's [AmesHousing package](https://cran.r-project.org/web/packages/AmesHousing/AmesHousing.pdf) 
-+ Original article by [DeCock 2011](http://jse.amstat.org/v19n3/decock.pdf)
++ Equality indices from [Equaldex](https://www.equaldex.com/equality-index) 
++ Study abroad information from [St. Olaf Smith Center](https://stolaf.studioabroad.com/index.cfm?FuseAction=Programs.SimpleSearch)
 
 
 Column {data-width = 200}
 -------------------------
 
-```{r  fig.width = 4, fig.height = 4}
-include_graphics("Colorado1.jpg") 
+```{r  fig.width = 6.5, fig.height = 5}
+include_graphics("IMG_3703.jpeg") 
 ```
 
 
