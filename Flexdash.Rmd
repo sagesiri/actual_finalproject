@@ -9,6 +9,8 @@ output:
 ```{r global, include=FALSE, message=FALSE}
 library(tidyverse)
 library(knitr)
+library(highcharter)
+library(plotly)
 studyabroad <- read_csv("studyabroad.csv")
 ```
 
@@ -42,29 +44,16 @@ include_graphics("HungaryPic.png")
 ```
 
 
-Categorical Predictors
+St. Olaf Study Abroad
 ==========================
 
 Inputs {.sidebar}
 -------------------------
 ```{r, echo=FALSE}
 inputPanel(
-      selectInput(inputId = "categ",
-                  label = h3("Boxplot categories"),
-                  choices = c("Lot Shape" = "LotShape", 
-                              "Land Slope" = "LandSlope", 
-                              "House Style" = "HouseStyle", 
-                              "Foundation" = "Foundation", 
-                              "Paved Drive" = "PavedDrive"),
-                  selected = "Foundation"),
-      selectInput(inputId = "shape",
-                  label = h3("Lot shape"),
-                  choices = c("Reg" = "Reg", 
-                              "IR1" = "IR1"),
-                  selected = "Foundation"),
-     numericInput(inputId = "cutoff", 
-                   label = h3("Exclude prices above:"), 
-                   value = 500000)
+  
+  sliderInput("num_adjust", label = "Number of Countries:",
+              min = 5, max = 20, value = 1, step = 1)
 )
 ```
 
@@ -73,61 +62,40 @@ Column
 -------------------------
 
 ```{r, echo = FALSE}
-renderPlot({
-    ames %>%
-      filter(LotShape == input$shape) %>%
-      filter(SalePrice < input$cutoff) %>%
-      select(input$categ, "SalePrice") %>%
-    ggplot(aes(x = .data[[input$categ]], y = SalePrice)) +
-      geom_boxplot() +
-      coord_flip() 
-})
+renderPlot(studyabroad |>
+  group_by(country) |>
+  summarize(n = n()) |>
+  mutate(country = fct_reorder(country, n)) |>
+  slice_max(country, n = as.numeric(input$num_adjust)) |>
+  ggplot(aes(x = country, y = n)) +
+  geom_col(fill = "red") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Offered Destinations"))
 ```
 
 Column 
 -------------------------
 
 ```{r, echo = FALSE}
-renderPlot({
-    ames %>% as_tibble() %>%
-      mutate(x = ames[[input$categ]]) %>%
-      group_by(x) %>%
-      summarise(meanprice = mean(SalePrice, na.rm = TRUE)) %>%
-      mutate(x = fct_reorder(x, meanprice)) %>%
-    ggplot(aes(x = x, y = meanprice)) +
-      geom_bar(stat = "identity") +
-      labs(x = input$categ)
+renderDataTable({
+    studyabroad |>
+    as_tibble() |>
+      group_by(country) |>
+      summarize(n = n()) |>
+      mutate(country = fct_reorder(country, n)) |>
+      slice_max(country, n = as.numeric(input$num_adjust)) |>
+    rename(`Number of Programs` = n,
+           Country = country)
 })
 ```
 
-Numerical Predictors
+Equality Index
 ==========================
 
 <center>
 
 ```{r, echo=FALSE}
-inputPanel(
-      selectInput(inputId = "numer",
-                  label = h3("Numeric predictors"),
-                  choices = c("Lot Area" = "LotArea", 
-                              "Overall Quality" = "OverallQual", 
-                              "Year Built" = "YearBuilt", 
-                              "Above Ground Sqft" = "SqFtAboveGrd", 
-                              "Bedrooms" = "Bedrooms"),
-                  selected = "Above Ground Sqft"),
-      numericInput(inputId = "cutoff2", 
-                   label = h3("Exclude prices above:"), 
-                   value = 500000)
-)
 
-renderPlot({
-    ames %>%
-      filter(SalePrice < input$cutoff2) %>%
-      select(input$numer, "SalePrice") %>%
-    ggplot(aes(x = .data[[input$numer]], y = SalePrice)) +
-      geom_point() +
-      geom_smooth() 
-})
 ```
 
 
