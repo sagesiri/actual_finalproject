@@ -46,7 +46,12 @@ studyabroad <- html_table(tables3, header = TRUE, fill = TRUE)[[1]]
 studyabroad <- clean_names(studyabroad)
 studyabroad$city <- str_replace_all(studyabroad$city, "(\t){1,}", "")
 studyabroad$country <- str_replace_all(studyabroad$country, "(\t){1,}", "")
-studyabroad$save_share<- ifelse(studyabroad$save_share == "Save this program", "J-term", "Semester")
+studyabroad$save_share <- ifelse(studyabroad$save_share == "Save this program", "J-term", "Semester")
+studyabroad$avg <- studyabroad |>
+  group_by(region) |>
+  mutate(avg_equality = mean(equality_index),
+           avg_legal = mean(legal_index),
+           avg_po = mean(public_opinion_index))
 ```
 
 ```{r}
@@ -58,17 +63,13 @@ equality$country <- str_replace_all(equality$country, "([a-z]+)([A-Z])", "\\1 \\
 ```
 
 ```{r}
-studyabroad <- clean_names(studyabroad)
+#studyabroad <- separate_rows(studyabroad, country, sep = "\n")
 ```
 
 ```{r}
-studyabroad <- separate_rows(studyabroad, country, sep = "\n")
-```
-
-```{r}
-studyabroad <- studyabroad |>
-  mutate(save_share = ifelse(save_share == "", FALSE, TRUE)) |>
-  rename(interim = save_share)
+#studyabroad <- studyabroad |>
+  #mutate(save_share = ifelse(save_share == "", FALSE, TRUE)) |>
+  #rename(interim = save_share)
 ```
 
 ```{r}

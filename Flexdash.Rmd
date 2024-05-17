@@ -28,7 +28,7 @@ Siri Sagedahl and Cole Monson
 
 This past January, Cole and Siri went on a study abroad program to Budapest, Hungary. It was both of our first times studying abroad and it made us realize the complexities of traveling to another location for extended periods of time. Despite only living in Budapest for a month, the stark cultural differences were apparent in our daily lives. One of these differences between Minnesota and Budapest was the acceptance of LGBTQ+ identifying people. The conservative government limits general LGBTQ+ rights and the solitary social culture is far less accepting than the United States. As an LGBTQ+ identifying person, Siri had to look into this culture prior to traveling to Hungary. 
 
-This project is a way to make this research more accessible to LGBTQ+ students looking to study abroad. Knowing how the new culture you're being immersed into sees your identity is very important for students' overall well being while away. This app connects programs to acceptance indecies of accpetance levels, allowing students to explore the country's culture prior to committing to a program.
+This project is a way to make this research more accessible to LGBTQ+ students looking to study abroad. Knowing how the new culture you're being immersed into sees your identity is very important for students' overall well being while away. **This app connects programs to indecies of LGBTQ+ acceptance levels, allowing students to explore the country's culture prior to committing to a program.**
 
 #### Data Sources
 
@@ -41,6 +41,25 @@ Column {data-width = 200}
 
 ```{r  fig.width = 6.5, fig.height = 5}
 include_graphics("HungaryPic.png") 
+```
+
+
+Equality by Program
+==========================
+
+<center>
+
+```{r, echo=FALSE}
+renderPlot({
+highchart() %>%
+  hc_add_series_map(
+    worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
+    name = "Equality Index"
+    )  %>% 
+  hc_colorAxis(stops = color_stops()) %>% 
+  hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
+  hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
+})
 ```
 
 
@@ -70,7 +89,7 @@ renderPlot(studyabroad |>
   ggplot(aes(x = country, y = n)) +
   geom_col(fill = "red") +
   theme(axis.text.x = element_text(angle = 90)) +
-  labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Offered Destinations"))
+  labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Visited Destinations"))
 ```
 
 Column 
@@ -89,23 +108,37 @@ renderDataTable({
 })
 ```
 
-Equality Index
+
+Global Equality
 ==========================
 
-<center>
-
+Inputs {.sidebar}
+-------------------------
 ```{r, echo=FALSE}
+inputPanel(
+  
+radioButtons("index", "Choose Index:", 
+             choices = list("General Equality Index" = "equality_index",
+                            "Legal Index" = "legal_index",
+                            "Public Opinion Index" = "public_opinion_index"),
+             selected = "avg_equality")
+)
+```
+
+
+Column 
+-------------------------
+
+```{r, echo = FALSE}
 renderPlot({
-highchart() %>%
-  hc_add_series_map(
-    worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
-    name = "Equality Index"
-    )  %>% 
-  hc_colorAxis(stops = color_stops()) %>% 
-  hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
-  hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
+  selected_index <- input$index
+  
+  ggplot(studyabroad, aes_string(x = selected_index, y = "region")) +
+    geom_boxplot() +
+    labs(x = input$index, y = "Region", title = paste("Boxplot of", input$index, "by Region"))
 })
 ```
+
 
 
 
