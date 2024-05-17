@@ -71,7 +71,7 @@ studyabroad <- studyabroad |>
   group_by(program_name) |>
   mutate(city_id = row_number()) |>
   ungroup()
-studyabroad <- study_abroad |>
+studyabroad <- studyabroad |>
   group_by(program_name, city) |>
   summarize(country = first(country),
             region = first(region),
@@ -87,22 +87,18 @@ equality$country <- str_replace_all(equality$country, "([a-z]+)([A-Z])", "\\1 \\
 ```
 
 ```{r}
-
+continent <- rbind(colnames(continent), continent)
+colnames(continent) <- c("cont", "equality_cont", "legal_cont", "po_cont")
+continent$cont <- str_remove_all(continent$cont, "\\d.*")
 ```
 
 ```{r}
 studyabroad <- studyabroad |>
-  left_join(equality)
- # group_by(region) |>
-   # mutate(avg_equality = mean(equality_index),
-          # avg_legal = mean(legal_index),
-          # avg_po = mean(as.numeric(public_opinion_index)))
-
-studyabroad <- studyabroad |>
-  left_join(studyabroad_t)
+  left_join(equality) |>
+  left_join(studyabroad_t) |>
+  left_join(continent, join_by(region == cont))
 ```
 
-\
 
 
 ```{r}
