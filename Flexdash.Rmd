@@ -30,6 +30,10 @@ This past January, Cole and Siri went on a study abroad program to Budapest, Hun
 
 This project is a way to make this research more accessible to LGBTQ+ students looking to study abroad. Knowing how the new culture you're being immersed into sees your identity is very important for students' overall well being while away. **This app connects programs to indecies of LGBTQ+ acceptance levels, allowing students to explore the country's culture prior to committing to a program.**
 
+The equality indices are split into three main categories: **general, legal, and public opinion**. According to the equality index methodology, the "LGBT legal index measures the current legal status of 13 different issues ranging from the legal status of homosexuality, same-sex marriage, transgender rights, LGBT discrimination protections, LGBT censorship laws, and more. Each topic is weighted differently" based on its relative importance. The public opinion index "measures the public attitudes towards LGBT people using surveys and polls from reputable organizations. This index is scored based on averaging the results of all surveys in a given region." Additionally, the scores are weighted using a time-decay weighting method based on the date the survey was published. Finally, the equality index is the average of legal index and public opinion index.
+
+Our final dataset, as displayed to the right, matches the location to these indices. Due to the fact that many programs visit more than one location within their time abroad, each observation represents a unique program-location pair.
+
 #### Data Sources
 
 + Equality indices from [Equaldex](https://www.equaldex.com/equality-index) 
@@ -39,8 +43,22 @@ This project is a way to make this research more accessible to LGBTQ+ students l
 Column {data-width = 200}
 -------------------------
 
-```{r  fig.width = 6.5, fig.height = 5}
+```{r  fig.width = 7, fig.height = 5}
 include_graphics("HungaryPic.png") 
+```
+
+
+```{r fig.width = 7, fig.height = 5}
+renderTable({
+  studyabroad |>
+    select(program_name, city, country, equality_index, legal_index, public_opinion_index) |>
+    rename(Program = program_name,
+           City = city,
+           Country = country,
+           `General Equality Index` = equality_index,
+           `Legal Index` = legal_index,
+           `Public Opinion Index` = public_opinion_index)
+})
 ```
 
 
@@ -121,7 +139,7 @@ radioButtons("index", "Choose Index:",
              choices = list("General Equality Index" = "equality_index",
                             "Legal Index" = "legal_index",
                             "Public Opinion Index" = "public_opinion_index"),
-             selected = "avg_equality")
+             selected = "equality_index")
 )
 ```
 
