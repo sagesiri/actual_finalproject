@@ -40,42 +40,70 @@ html_table(tables3, header = TRUE, fill = TRUE)
 
 studyabroad <- html_table(tables3, header = TRUE, fill = TRUE)[[1]]
 ```
+```{r}
+continent <- read_html("https://www.equaldex.com/equality-index")
+
+tables2 <- html_nodes(equaldex, css = "table") 
+
+html_table(tables2, header = TRUE, fill = TRUE)
+
+continent <- html_table(tables2, header = TRUE, fill = TRUE)[[1]]
+```
 
 ```{r}
 #studyabroad cleaning
 studyabroad <- clean_names(studyabroad)
 studyabroad$city <- str_replace_all(studyabroad$city, "(\t){1,}", "")
 studyabroad$country <- str_replace_all(studyabroad$country, "(\t){1,}", "")
-studyabroad$save_share <- ifelse(studyabroad$save_share == "Save this program", "J-term", "Semester")
-studyabroad$avg <- studyabroad |>
-  group_by(region) |>
-  mutate(avg_equality = mean(equality_index),
-           avg_legal = mean(legal_index),
-           avg_po = mean(public_opinion_index))
+studyabroad$region <- str_replace_all(studyabroad$region, "(\t){1,}", "")
+studyabroad$duration <- ifelse(studyabroad$save_share == "Save this program", "J-term", "Semester")
+```
+
+```{r}
+studyabroad_t <- studyabroad |>
+  select(program_name,
+         duration)
+```
+
+```{r}
+studyabroad <- separate_rows(studyabroad, city, country, region, sep = "\n")
+studyabroad <- studyabroad |>
+  group_by(program_name) |>
+  mutate(city_id = row_number()) |>
+  ungroup()
+studyabroad <- study_abroad |>
+  group_by(program_name, city) |>
+  summarize(country = first(country),
+            region = first(region),
+            .groups = "drop")
 ```
 
 ```{r}
 #equality equality
 equality <- clean_names(equality)
-equality$public_opinion_index <- str_replace_all(equality$public_opinion_index, "â.", "NA")
+equality$public_opinion_index <- str_replace_all(equality$public_opinion_index, "â.", "50")
 equality$country <- str_remove_all(equality$country, "[\\d\\d. ]")
 equality$country <- str_replace_all(equality$country, "([a-z]+)([A-Z])", "\\1 \\2")
 ```
 
 ```{r}
-#studyabroad <- separate_rows(studyabroad, country, sep = "\n")
-```
 
-```{r}
-#studyabroad <- studyabroad |>
-  #mutate(save_share = ifelse(save_share == "", FALSE, TRUE)) |>
-  #rename(interim = save_share)
 ```
 
 ```{r}
 studyabroad <- studyabroad |>
   left_join(equality)
+ # group_by(region) |>
+   # mutate(avg_equality = mean(equality_index),
+          # avg_legal = mean(legal_index),
+          # avg_po = mean(as.numeric(public_opinion_index)))
+
+studyabroad <- studyabroad |>
+  left_join(studyabroad_t)
 ```
+
+\
+
 
 ```{r}
 write.csv(studyabroad, file = "studyabroad.csv")

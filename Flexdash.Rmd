@@ -11,6 +11,7 @@ library(tidyverse)
 library(knitr)
 library(highcharter)
 library(plotly)
+library(ggrepel)
 studyabroad <- read_csv("studyabroad.csv")
 ```
 
@@ -157,6 +158,14 @@ renderPlot({
 })
 ```
 
-
+```{r, echo = FALSE}
+renderPlot({
+  studyabroad |>
+    ggplot(aes(x = public_opinion_index, y = legal_index, label = country)) +
+    geom_point() +
+    geom_text_repel(hjust = 1, vjust = 1) +
+    labs(x = "Public Opinion Index", y = "Legal Index")
+})
+```
 
 
