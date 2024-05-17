@@ -161,6 +161,7 @@ renderPlot({
 ```{r, echo = FALSE}
 renderPlot({
   studyabroad |>
+    distinct(studyabroad$country) |>
     ggplot(aes(x = public_opinion_index, y = legal_index, label = country)) +
     geom_point() +
     geom_text_repel(hjust = 1, vjust = 1) +
