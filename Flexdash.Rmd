@@ -498,6 +498,5 @@ This project aimed to connect LGBTQ+ identifying students to an accessible resou
 Our research revealed that the most welcoming study abroad destinations for students through St. Olaf include Canada, Norway, Germany, Spain, Denmark, and the Netherlands. The least acceptance locations include Ghana, Cameroon, Tanzania, and Kenya. **However, despite these numbers, the choice to study abroad is ultimately an individual decision. Many factors can influence a students' choice in program, this is simply one of those factors. An acceptance index does not guarantee safety, health or wellness while abroad.**
 
 ```{r  fig.width = 7, fig.height = 5, fig.align='center'}
-include_graphics("IMG_3423.jpeg") 
+include_graphics("IMG_0033.jpeg")
 ```
-*Image taken by Siri from Budapest, Hungary
