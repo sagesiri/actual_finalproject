@@ -270,14 +270,13 @@ inputPanel(
             choices = c("Math" = "math", 
                         "Natural Science" = "science", 
                         "Environmental Science" = "environment", 
-                        "Art" = "art", 
-                        "History" = "history", 
+                        "Art" = "art",
                         "Dance" = "dance", 
                         "Social Work" = "social work", 
                         "Classical Studies" = "classic", 
                         "Theater" = "theater", 
                         "Music" = "music", 
-                        "Economomics" = "economics", 
+                        "Economics" = "economics", 
                         "Education/Student Teaching" = "teaching"),
             selected = "science")
 )
