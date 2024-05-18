@@ -12,6 +12,8 @@ library(knitr)
 library(highcharter)
 library(plotly)
 library(ggrepel)
+library(forcats)
+library(shinydashboard)
 studyabroad <- read_csv("studyabroad.csv")
 ```
 
@@ -157,45 +159,73 @@ renderDataTable({
 Global Equality
 ==========================
 
-Column {.sidebar}
+Row {.tabset .tabset-fade}
 -------------------------
-```{r, echo=FALSE}
-selectInput("index_type", "Choose Index Type:",
-            choices = c("Equality Index" = "equality_cont",
-                        "Legal Index" = "legal_cont",
-                        "Public Opinion Index" = "po_cont"),
-            selected = "equality_cont")
-actionButton("update", "Update Graph")
 
-#selectInput("region", "Choose Region:",
-            #choices = c("Africa", "Asia", "Europe", "North America", "Oceania", "South America"),
-            #selected = "Africa")
-```
+### Equality Index
 
-
-Column 
--------------------------
 ```{r, echo = FALSE}
 renderPlot({
-  input$update
-  isolate({
-    selected_index <- input$index_type
-    
-    studyabroad$index_value <- studyabroad[[selected_index]]
-    
-    studyabroad |>
+   studyabroad |>
       select(region, equality_cont, legal_cont, po_cont) |>
       group_by(region) |>
       mutate(region_id = row_number()) |>
       filter(region_id == 1) |>
-  ggplot(aes_string(x = "region", y = "selected_index")) +
-  geom_col(fill = "skyblue") +
+  ggplot(aes(x = fct_reorder(region, equality_cont), y = equality_cont, fill = region)) +
+  geom_col() +
   coord_flip() +
-      labs(x = "Continent", y = "Index Value", 
-           title = paste("Average", gsub("_", " ", selected_index), "by Continent")) +
+      labs(x = "Continent", y = "Equality Index Value", 
+           title = "Equality Index by Continent", fill = "Continent") +
       theme_minimal()
+
   })
-})
+```
+
+### Legal Index
+
+```{r, echo = FALSE}
+renderPlot({
+   studyabroad |>
+      select(region, equality_cont, legal_cont, po_cont) |>
+      group_by(region) |>
+      mutate(region_id = row_number()) |>
+      filter(region_id == 1) |>
+  ggplot(aes(x = fct_reorder(region, legal_cont), y = legal_cont, fill = region)) +
+  geom_col() +
+  coord_flip() +
+      labs(x = "Continent", y = "Legal Index Value", 
+           title = "Legal Index by Continent", fill = "Continent") +
+      theme_minimal()
+
+  })
+```
+
+### Public Opinion Index
+
+```{r, echo = FALSE}
+renderPlot({
+   studyabroad |>
+      select(region, equality_cont, legal_cont, po_cont) |>
+      group_by(region) |>
+      mutate(region_id = row_number()) |>
+      filter(region_id == 1) |>
+  ggplot(aes(x = fct_reorder(region, po_cont), y = po_cont, fill = region)) +
+  geom_col() +
+  coord_flip() +
+      labs(x = "Continent", y = "Public Opinion Index Value", 
+           title = "Public Opinion Index by Continent", fill = "Continent") +
+      theme_minimal()
+
+  })
+```
+
+Row
+-------------------------
+```{r, echo=FALSE}
+selectInput("region", "Choose Continent:",
+            choices = c("Africa", "Asia", "Europe", "North America", "Oceania", "South America"),
+            multiple = TRUE,
+            selected = "Africa")
 ```
 
 ```{r, echo = FALSE}
@@ -203,7 +233,8 @@ renderPlot({
   studyabroad |>
       group_by(country) |>
       mutate(country_id = row_number()) |>
-      filter(country_id == 1) |>
+      filter(country_id == 1,
+             region %in% input$region) |>
     ggplot(aes(x = public_opinion_index, y = legal_index, label = country, color = region)) +
     geom_point() +
     geom_text_repel() +
@@ -211,5 +242,44 @@ renderPlot({
 })
 ```
 
+```{r}
+valueBoxOutput("equalityGauge")
+valueBoxOutput("legalGauge")
+valueBoxOutput("poGauge")
+```
 
+```{r}
+server <- function(input, output, session) {
+  output$equalityGauge <- renderValueBox({
+    avg_equality <- studyabroad |>
+      summarize(avg_equality = mean(equality_cont, na.rm = TRUE)) |>
+      pull(avg_equality)
+    valueBox(value = round(avg_equality, 2), subtitle = "Global Average Equality Index")
+  })
+  
+  output$legalGauge <- renderValueBox({
+    avg_legal <- studyabroad |>
+      summarize(avg_legal = mean(legal_cont, na.rm = TRUE)) |>
+      pull(avg_legal)
+    valueBox(value = round(avg_legal, 2), subtitle = "Global Average Legal Index")
+  })
+  
+  output$poGauge <- renderValueBox({
+    avg_po <- studyabroad |>
+      summarize(avg_po = mean(po_cont, na.rm = TRUE)) |>
+      pull(avg_po)
+    valueBox(value = round(avg_po, 2), subtitle = "Global Average Public Opinion Index")
+  })
+}
+
+shinyApp(ui = dashboardPage(
+  dashboardHeader(disable = TRUE),
+  dashboardSidebar(disable = TRUE),
+  dashboardBody(fluidPage(
+    uiOutput("equalityGauge"),
+    uiOutput("legalGauge"),
+    uiOutput("poGauge")
+  ))
+), server)
+```
 
