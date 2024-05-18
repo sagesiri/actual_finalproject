@@ -272,8 +272,19 @@ inputPanel(
 
 inputPanel(
     selectInput("subject", "Choose Subject:",
-            choices = c("math", "science", "environment", "art", "history", "dance", "social work", "classic", "theater", "music", "economics", "teaching"),
-            selected = "math")
+            choices = c("Math" = "math", 
+                        "Natural Science" = "science", 
+                        "Environmental Science" = "environment", 
+                        "Art" = "art", 
+                        "History" = "history", 
+                        "Dance" = "dance", 
+                        "Social Work" = "social work", 
+                        "Classical Studies" = "classic", 
+                        "Theater" = "theater", 
+                        "Music" = "music", 
+                        "Economomics" = "economics", 
+                        "Education/Student Teaching" = "teaching"),
+            selected = "science")
 )
 ```
 
@@ -293,20 +304,6 @@ renderPlot(studyabroad |>
   labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Visited Destinations"))
 ```
 
-```{r}
-renderPlot({studyabroad |>
-            filter(detected_subject == "math") |>
-             group_by(region) |>
-             summarize(n = n()) |>
-             ggplot(aes(x = region, y = n)) +
-             geom_col()
-  })
-```
-
-
-Column 
--------------------------
-
 ```{r, echo = FALSE}
 renderDataTable({
     studyabroad |>
@@ -320,6 +317,16 @@ renderDataTable({
 })
 ```
 
+```{r}
+renderPlot({studyabroad |>
+            filter(detected_subject == input$subject) |>
+             group_by(country) |>
+             summarize(n = n()) |>
+             ggplot(aes(x = country, y = n)) +
+             geom_col(fill = "skyblue") +
+    labs(title = "Program Locations by Subject", x = "Country", y = "Number of Programs")
+  })
+```
 
 Global Equality
 ==========================
@@ -330,6 +337,11 @@ Row {.tabset .tabset-fade}
 
 ```{r, echo = FALSE}
 renderPlot({
+   average_equality <- studyabroad |>
+      select(equality_cont) |>
+      summarise(avg_equality = mean(equality_cont, na.rm = TRUE)) |>
+      pull(avg_equality)
+   
    studyabroad |>
       select(region, equality_cont, legal_cont, po_cont) |>
       group_by(region) |>
@@ -338,6 +350,8 @@ renderPlot({
   ggplot(aes(x = fct_reorder(region, equality_cont), y = equality_cont, fill = region)) +
   geom_col() +
   coord_flip() +
+  geom_hline(yintercept = average_equality, linetype = "dashed", color = "skyblue", size = 1) +
+     annotate("text", x = Inf, y = average_equality, label = "Global Average", vjust = -0.5, hjust = 1, color = "skyblue") +
       labs(x = "Continent", y = "Equality Index Value", 
            title = "Equality Index by Continent", fill = "Continent") +
       theme_minimal()
@@ -348,7 +362,12 @@ renderPlot({
 
 ```{r}
 renderPlot({
-   studyabroad |>
+   average_legal <- studyabroad |>
+      select(legal_cont) |>
+      summarise(avg_legal = mean(legal_cont, na.rm = TRUE)) |>
+      pull(avg_legal)
+  
+    studyabroad |>
       select(region, equality_cont, legal_cont, po_cont) |>
       group_by(region) |>
       mutate(region_id = row_number()) |>
@@ -356,6 +375,8 @@ renderPlot({
     ggplot(aes(x = fct_reorder(region, legal_cont), y = legal_cont, fill = region)) +
   geom_col() +
     coord_flip() +
+    geom_hline(yintercept = average_legal, linetype = "dashed", color = "skyblue", size = 1) +
+     annotate("text", x = Inf, y = average_legal, label = "Global Average", vjust = -0.5, hjust = 1, color = "skyblue") +
   labs(x = "Continent", y = "Legal Index Value", 
            title = "Legal Index by Continent", fill = "Continent") +
       theme_minimal()
@@ -366,6 +387,10 @@ renderPlot({
 
 ```{r, echo = FALSE}
 renderPlot({
+  average_po <- studyabroad |>
+      select(po_cont) |>
+      summarise(avg_po = mean(po_cont, na.rm = TRUE)) |>
+      pull(avg_po)
    studyabroad |>
       select(region, equality_cont, legal_cont, po_cont) |>
       group_by(region) |>
@@ -374,6 +399,8 @@ renderPlot({
   ggplot(aes(x = fct_reorder(region, po_cont), y = po_cont, fill = region)) +
   geom_col() +
   coord_flip() +
+     geom_hline(yintercept = average_po, linetype = "dashed", color = "skyblue", size = 1) +
+     annotate("text", x = Inf, y = average_po, label = "Global Average", vjust = -0.5, hjust = 1, color = "skyblue") +
       labs(x = "Continent", y = "Public Opinion Index Value", 
            title = "Public Opinion Index by Continent", fill = "Continent") +
       theme_minimal()
