@@ -3,7 +3,7 @@ title: "LGBTQ+ Equality & Study Abroad"
 runtime: shiny
 output: 
   flexdashboard::flex_dashboard:
-    theme: yeti
+    theme: united
 ---
 
 ```{r global, include=FALSE, message=FALSE}
@@ -14,6 +14,13 @@ library(plotly)
 library(ggrepel)
 library(forcats)
 library(shinydashboard)
+library(sf)
+library(rnaturalearth)
+library(wbstats)
+library(leaflet)
+library(DT)
+library(ggplot2)
+library(readr)
 studyabroad <- read_csv("studyabroad.csv")
 ```
 
@@ -23,11 +30,17 @@ About
 Column {data-width = 400}
 -------------------------
 
+
+
+```{r  fig.width = 7, fig.height = 5, fig.align='center'}
+include_graphics("HungaryPic.png") 
+```
+
 #### Authors
 
 Siri Sagedahl and Cole Monson
 
-#### Background Information
+#### The Story 
 
 This past January, Cole and Siri went on a study abroad program to Budapest, Hungary. It was both of our first times studying abroad and it made us realize the complexities of traveling to another location for extended periods of time. Despite only living in Budapest for a month, the stark cultural differences were apparent in our daily lives. One of these differences between Minnesota and Budapest was the acceptance of LGBTQ+ identifying people. The conservative government limits general LGBTQ+ rights and the solitary social culture is far less accepting than the United States. As an LGBTQ+ identifying person, Siri had to look into this culture prior to traveling to Hungary. 
 
@@ -43,15 +56,9 @@ Our final dataset, as displayed to the right, matches the location to these indi
 + Study abroad information from [St. Olaf Smith Center](https://stolaf.studioabroad.com/index.cfm?FuseAction=Programs.SimpleSearch)
 
 
-Column {data-width = 200}
--------------------------
-
-```{r  fig.width = 7, fig.height = 5}
-include_graphics("HungaryPic.png") 
-```
 
 
-```{r fig.width = 7, fig.height = 5}
+```{r fig.width = 7, fig.height = 5, fig.align='center'}
 renderTable({
   studyabroad |>
     select(program_name, city, country, equality_index, legal_index, public_opinion_index) |>
@@ -68,6 +75,7 @@ renderTable({
 Equality by Program
 ==========================
 
+<<<<<<< HEAD
 Column
 -------------------------
 ```{r, echo=FALSE}
@@ -84,6 +92,96 @@ highchart() %>%
 ```
 
 
+=======
+```{r}
+map <- ne_countries(returnclass = "sf")
+names(map)[names(map) == "iso_a3"] <- "ISO3"
+names(map)[names(map) == "name"] <- "NAME"
+```
+
+```{r}
+map$equality_index <- studyabroad[match(map$NAME, studyabroad$country), ]$equality_index
+```
+
+
+<center>
+
+### Map
+
+
+```{r}
+pal <- colorBin(
+  palette = "viridis", domain = map$equality_index,
+  bins = seq(0, max(map$equality_index, na.rm = TRUE) + 10, by = 10)
+)
+
+
+map$labels <- paste0(
+  "<strong> Country: </strong> ",
+  map$NAME, "<br/> ",
+  "<strong> Equality Index: </strong> ",
+  map$equality_index, "<br/> "
+) %>%
+  lapply(htmltools::HTML)
+
+
+mapFiltered <- reactive({
+  rowsinrangeslider <- which(map$equality_index >= input$rangevalues[1] &
+    map$equality_index <= input$rangevalues[2])
+  map[rowsinrangeslider, ]
+})
+
+renderLeaflet({
+  if (nrow(mapFiltered()) == 0) {
+    return(NULL)
+  }
+
+  leaflet(mapFiltered()) %>%
+    addTiles() %>%
+    setView(lng = 0, lat = 30, zoom = 2) %>%
+    addPolygons(
+      fillColor = ~ pal(equality_index),
+      #color = "white",
+      weight = 2,
+      fillOpacity = 0.7,
+      label = ~labels,
+      highlight = highlightOptions(
+        color = "black",
+        bringToFront = TRUE
+      )
+    ) %>%
+    leaflet::addLegend(
+      pal = pal, values = ~equality_index,
+      opacity = 0.7, title = "Equality Index"
+    )
+})
+```
+
+```{r}
+minvalue <- floor(min(map$equality_index, na.rm = TRUE))
+maxvalue <- ceiling(max(map$equality_index, na.rm = TRUE))
+
+sliderInput("rangevalues",
+  label = "Equality Index Ratings:",
+  min = minvalue, max = maxvalue,
+  value = c(minvalue, maxvalue)
+)
+           
+```
+
+```{r, echo=FALSE}
+#renderPlot({
+#highchart() %>%
+  #hc_add_series_map(
+    #worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
+    #name = "Equality Index"
+    #)  %>% 
+  #hc_colorAxis(stops = color_stops()) %>% 
+  #hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
+  #hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
+#})
+```
+>>>>>>> 4bd8d860296041082c79db1aa63ff05c8f0da691
 
 
 St. Olaf Study Abroad
@@ -152,86 +250,43 @@ renderDataTable({
 Global Equality
 ==========================
 
-Row {.tabset .tabset-fade}
--------------------------
-
-### Equality Index
-
-```{r, echo = FALSE}
-renderPlot({
-   studyabroad |>
-      select(region, equality_cont, legal_cont, po_cont) |>
-      group_by(region) |>
-      mutate(region_id = row_number()) |>
-      filter(region_id == 1) |>
-  ggplot(aes(x = fct_reorder(region, equality_cont), y = equality_cont, fill = region)) +
-  geom_col() +
-  coord_flip() +
-      labs(x = "Continent", y = "Equality Index Value", 
-           title = "Equality Index by Continent", fill = "Continent") +
-      theme_minimal()
-
-  })
-```
-
-### Legal Index
-
-```{r, echo = FALSE}
-renderPlot({
-   studyabroad |>
-      select(region, equality_cont, legal_cont, po_cont) |>
-      group_by(region) |>
-      mutate(region_id = row_number()) |>
-      filter(region_id == 1) |>
-  ggplot(aes(x = fct_reorder(region, legal_cont), y = legal_cont, fill = region)) +
-  geom_col() +
-  coord_flip() +
-      labs(x = "Continent", y = "Legal Index Value", 
-           title = "Legal Index by Continent", fill = "Continent") +
-      theme_minimal()
-
-  })
-```
-
-### Public Opinion Index
-
-```{r, echo = FALSE}
-renderPlot({
-   studyabroad |>
-      select(region, equality_cont, legal_cont, po_cont) |>
-      group_by(region) |>
-      mutate(region_id = row_number()) |>
-      filter(region_id == 1) |>
-  ggplot(aes(x = fct_reorder(region, po_cont), y = po_cont, fill = region)) +
-  geom_col() +
-  coord_flip() +
-      labs(x = "Continent", y = "Public Opinion Index Value", 
-           title = "Public Opinion Index by Continent", fill = "Continent") +
-      theme_minimal()
-
-  })
-```
-
-Row
+Inputs {.sidebar}
 -------------------------
 ```{r, echo=FALSE}
-selectInput("region", "Choose Continent:",
-            choices = c("Africa", "Asia", "Europe", "North America", "Oceania", "South America"),
-            multiple = TRUE,
-            selected = "Africa")
+inputPanel(
+  
+radioButtons("index", "Choose Index:", 
+             choices = list("General Equality Index" = "equality_index",
+                            "Legal Index" = "legal_index",
+                            "Public Opinion Index" = "public_opinion_index"),
+             selected = "equality_index")
+)
+```
+
+
+Column 
+-------------------------
+
+```{r, echo = FALSE}
+renderPlot({
+  selected_index <- input$index
+  
+  ggplot(studyabroad, aes_string(x = selected_index, y = "region")) +
+    geom_boxplot() +
+    labs(x = input$index, y = "Region", title = paste("Boxplot of", input$index, "by Region"))
+})
 ```
 
 ```{r, echo = FALSE}
 renderPlot({
   studyabroad |>
-      group_by(country) |>
-      mutate(country_id = row_number()) |>
-      filter(country_id == 1,
-             region %in% input$region) |>
-    ggplot(aes(x = public_opinion_index, y = legal_index, label = country, color = region)) +
+    distinct(studyabroad$country) |>
+    ggplot(aes(x = public_opinion_index, y = legal_index, label = country)) +
     geom_point() +
-    geom_text_repel() +
-    labs(title = "Study Abroad Location Public Opinion vs. Legal Index", x = "Public Opinion Index", y = "Legal Index", color = "Continent")
+    geom_text_repel(hjust = 1, vjust = 1) +
+    labs(x = "Public Opinion Index", y = "Legal Index")
 })
 ```
+
+
 
