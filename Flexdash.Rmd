@@ -14,6 +14,13 @@ library(plotly)
 library(ggrepel)
 library(forcats)
 library(shinydashboard)
+library(sf)
+library(rnaturalearth)
+library(wbstats)
+library(leaflet)
+library(DT)
+library(ggplot2)
+library(readr)
 studyabroad <- read_csv("studyabroad.csv")
 ```
 
@@ -23,6 +30,8 @@ About
 Column {data-width = 400}
 -------------------------
 
+
+
 ```{r  fig.width = 7, fig.height = 5, fig.align='center'}
 include_graphics("HungaryPic.png") 
 ```
@@ -31,7 +40,7 @@ include_graphics("HungaryPic.png")
 
 Siri Sagedahl and Cole Monson
 
-#### Background Information
+#### The Story 
 
 This past January, Cole and Siri went on a study abroad program to Budapest, Hungary. It was both of our first times studying abroad and it made us realize the complexities of traveling to another location for extended periods of time. Despite only living in Budapest for a month, the stark cultural differences were apparent in our daily lives. One of these differences between Minnesota and Budapest was the acceptance of LGBTQ+ identifying people. The conservative government limits general LGBTQ+ rights and the solitary social culture is far less accepting than the United States. As an LGBTQ+ identifying person, Siri had to look into this culture prior to traveling to Hungary. 
 
@@ -66,19 +75,93 @@ renderTable({
 Equality by Program
 ==========================
 
+```{r}
+map <- ne_countries(returnclass = "sf")
+names(map)[names(map) == "iso_a3"] <- "ISO3"
+names(map)[names(map) == "name"] <- "NAME"
+```
+
+```{r}
+map$equality_index <- studyabroad[match(map$NAME, studyabroad$country), ]$equality_index
+```
+
+
 <center>
 
-```{r, echo=FALSE}
-renderPlot({
-highchart() %>%
-  hc_add_series_map(
-    worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
-    name = "Equality Index"
-    )  %>% 
-  hc_colorAxis(stops = color_stops()) %>% 
-  hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
-  hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
+### Map
+
+
+```{r}
+pal <- colorBin(
+  palette = "viridis", domain = map$equality_index,
+  bins = seq(0, max(map$equality_index, na.rm = TRUE) + 10, by = 10)
+)
+
+
+map$labels <- paste0(
+  "<strong> Country: </strong> ",
+  map$NAME, "<br/> ",
+  "<strong> Equality Index: </strong> ",
+  map$equality_index, "<br/> "
+) %>%
+  lapply(htmltools::HTML)
+
+
+mapFiltered <- reactive({
+  rowsinrangeslider <- which(map$equality_index >= input$rangevalues[1] &
+    map$equality_index <= input$rangevalues[2])
+  map[rowsinrangeslider, ]
 })
+
+renderLeaflet({
+  if (nrow(mapFiltered()) == 0) {
+    return(NULL)
+  }
+
+  leaflet(mapFiltered()) %>%
+    addTiles() %>%
+    setView(lng = 0, lat = 30, zoom = 2) %>%
+    addPolygons(
+      fillColor = ~ pal(equality_index),
+      #color = "white",
+      weight = 2,
+      fillOpacity = 0.7,
+      label = ~labels,
+      highlight = highlightOptions(
+        color = "black",
+        bringToFront = TRUE
+      )
+    ) %>%
+    leaflet::addLegend(
+      pal = pal, values = ~equality_index,
+      opacity = 0.7, title = "Equality Index"
+    )
+})
+```
+
+```{r}
+minvalue <- floor(min(map$equality_index, na.rm = TRUE))
+maxvalue <- ceiling(max(map$equality_index, na.rm = TRUE))
+
+sliderInput("rangevalues",
+  label = "Equality Index Ratings:",
+  min = minvalue, max = maxvalue,
+  value = c(minvalue, maxvalue)
+)
+           
+```
+
+```{r, echo=FALSE}
+#renderPlot({
+#highchart() %>%
+  #hc_add_series_map(
+    #worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
+    #name = "Equality Index"
+    #)  %>% 
+  #hc_colorAxis(stops = color_stops()) %>% 
+  #hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
+  #hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
+#})
 ```
 
 
