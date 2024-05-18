@@ -77,24 +77,7 @@ renderTable({
 Equality by Program
 ==========================
 
-<<<<<<< HEAD
-Column
--------------------------
-```{r, echo=FALSE}
-renderHighchart({
-highchart() %>%
-  hc_add_series_map(
-    worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
-    name = "Equality Index"
-    )  %>% 
-  hc_colorAxis(stops = color_stops()) %>% 
-  hc_title(text = "Equality Index in St. Olaf Study Abroad Programs") %>% 
-  hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
-})
-```
 
-
-=======
 ```{r}
 map <- ne_countries(returnclass = "sf")
 names(map)[names(map) == "iso_a3"] <- "ISO3"
@@ -103,12 +86,17 @@ names(map)[names(map) == "name"] <- "NAME"
 
 ```{r}
 map$equality_index <- studyabroad[match(map$NAME, studyabroad$country), ]$equality_index
+map$legal_index <- studyabroad[match(map$NAME, studyabroad$country), ]$legal_index
+map$public_opinion_index <- studyabroad[match(map$NAME, studyabroad$country), ]$public_opinion_index
 ```
+
+
 
 
 <center>
 
 ### Study Abroad Opportunities for the 2024-2025 School Year
+
 
 
 ```{r}
@@ -122,7 +110,11 @@ map$labels <- paste0(
   "<strong> Country: </strong> ",
   map$NAME, "<br/> ",
   "<strong> Equality Index: </strong> ",
-  map$equality_index, "<br/> "
+  map$equality_index, "<br/> ",
+  "  - Legal Index: ", 
+  map$legal_index, "<br/> ",
+  "  - Social Index: ",
+  map$public_opinion_index, "<br/> "
 ) %>%
   lapply(htmltools::HTML)
 
@@ -140,7 +132,7 @@ renderLeaflet({
 
   leaflet(mapFiltered()) %>%
     addTiles() %>%
-    setView(lng = 0, lat = 30, zoom = 2) %>%
+    setView(lng = 0, lat = 30, zoom = 1.5) %>%
     addPolygons(
       fillColor = ~ pal(equality_index),
       #color = "white",
@@ -171,6 +163,81 @@ sliderInput("rangevalues",
            
 ```
 
+
+
+```{r}
+click_tract <- eventReactive(input$map_shape_click, {
+
+    x <- input$map_shape_click
+
+    y <- x$id
+
+    return(y)
+
+  })
+
+tract_ids <- reactive({
+  eventdata <- event_data("plotly_selected", source = "source")
+  if (is.null(eventdata)) {
+
+    return(NULL) # do nothing
+
+  } else {
+
+    tracts <- eventdata$key
+
+    return(tracts)
+  }
+})
+
+
+
+observe({
+  
+  req(tract_ids())
+  
+  proxy <- leafletProxy('map')
+  
+  sub <- filter(metro(), tract_id %in% tract_ids())
+
+  box <- st_bbox(sub) %>% as.vector()
+
+  # Clear old selection on map, and add new selection
+  proxy %>%
+    clearGroup(group = 'sub') %>%
+    addPolygons(data = sub, fill = FALSE, color = '#FFFF00',
+                 opacity = 1, group = 'sub', weight = 1.5) %>%
+    fitBounds(lng1 = box[1],
+              lat1 = box[2],
+              lng2 = box[3],
+              lat2 = box[4])
+
+})
+
+
+observeEvent(click_tract(), {
+
+  # Add the clicked tract to the map in aqua, and remove when a new one is clicked
+  map <- leafletProxy('map') %>%
+      removeShape('htract') %>%
+      addPolygons(data = filter(metro(), tract_id == click_tract()), fill = FALSE,
+                  color = '#00FFFF', opacity = 1, layerId = 'htract', 
+                  weight = 1.6)
+
+  })
+
+
+
+tract_data <- reactive({
+
+    # Fetch data for the clicked tract
+    return(filter(metro(), tract_id == click_tract()))
+
+})
+```
+
+
+
 ```{r, echo=FALSE}
 #renderPlot({
 #highchart() %>%
@@ -183,7 +250,7 @@ sliderInput("rangevalues",
   #hc_subtitle(text = "St. Olaf Study Abroad Program Locations")
 #})
 ```
->>>>>>> 4bd8d860296041082c79db1aa63ff05c8f0da691
+
 
 
 St. Olaf Study Abroad
