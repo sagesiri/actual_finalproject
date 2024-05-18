@@ -330,6 +330,18 @@ renderPlot({studyabroad |>
 Global Equality
 ==========================
 
+**Plot Descriptions**
+
+EQUALITY INDEX: This bar chart represents the average Equality Index level by continent. This measurement takes the average between legal and public opinion index. South America and Europe are tied for having the highest score, while Africa has the lowest. The blue dashed line represents the global average score.
+
+LEGAL INDEX: This bar chart represents the average Legal Index level by continent. This score "measures the current legal status of 13 different issues ranging from the legal status of homosexuality, same-sex marriage, transgender rights, LGBT discrimination protections, LGBT censorship laws, and more" (Equaldex). South America once again has the highest overall score and Africa once again has the lowest. The blue dahsed line represents the global average score.
+
+PUBLIC OPINION: This bar chart represents the average Public Oppinion Index level by continent. This score "measures the public attitudes towards LGBT people using surveys and polls from reputable organizations[...] averaging the results of all surveys in a given region" (Equaldex). Europe has the highest score with South America in a close second, with Africa once again having the lowest score.
+
+STUDY ABROAD LOCATION PUBLIC OPINION vs. LEGAL INDEX: This scatterplot displays the relationship between legal and public opinion index in the countries where St. Olaf has study abroad programs. There is a clear positive correlation between these two variables. As one increases, the other also tends to increase. The points are labeled and colored by continent. There are the most European countries in the upper right-hand corner, therefore we can infer that Europe tends to have both high legal index and public opinion index. There are several African countries occupying the lower left-hand corner, therefore we can infer Africa tends to have low legal and public opinion indices. 
+
+
+
 Row {.tabset .tabset-fade}
 -------------------------
 ### Equality Index
@@ -355,6 +367,7 @@ renderPlot({
            title = "Equality Index by Continent", fill = "Continent") +
       theme_minimal()
   })
+"This bar chart represents the average Equality Index level by continent. South America and Europe are tied for having the highest score, while Africa has the lowest. The blue dashed line represents the global average score."
 ```
 
 ### Legal Index
@@ -405,6 +418,8 @@ renderPlot({
       theme_minimal()
   })
 ```
+
+
 
 Row
 -------------------------
@@ -480,7 +495,7 @@ The process of aggregating this data into meaningful and accessible data visuali
 
 This project aimed to connect LGBTQ+ identifying students to an accessible resource to identify the acceptance levels of study abroad locations. In the process, we learned a lot about how the LGBTQ+ community is received on a global scale, as well as how St. Olaf study abroad programs are distributed throughout the globe.
 
-Our research revealed that the most welcoming study abroad destinations for students through St. Olaf include Canada, Norway, Germany, Spain, Denmark, and the Netherlands. The least acceptance locations include Ghana, Cameroon, Tanzania, and Kenya. However, despite these numbers, the choice to study abroad is ultimately an individual decision. Many factors can influence a students' choice in program, this is simply one of those factors. 
+Our research revealed that the most welcoming study abroad destinations for students through St. Olaf include Canada, Norway, Germany, Spain, Denmark, and the Netherlands. The least acceptance locations include Ghana, Cameroon, Tanzania, and Kenya. **However, despite these numbers, the choice to study abroad is ultimately an individual decision. Many factors can influence a students' choice in program, this is simply one of those factors. An acceptance index does not guarantee safety, health or wellness while abroad.**
 
 ```{r  fig.width = 7, fig.height = 5, fig.align='center'}
 include_graphics("IMG_3423.jpeg") 
