@@ -1,134 +1,134 @@
-"","program_name","city","country","region","equality_cont","legal_cont","po_cont","equality_index","legal_index","public_opinion_index","duration"
-"1","Arts and Sciences in Legon, Ghana","Legon","Ghana","Africa","25","28","20",7,5,"9","Semester"
-"2","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Cape Town","South Africa","Africa","25","28","20",71,84,"58","Semester"
-"3","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Windhoek","Namibia","Africa","25","28","20",40,46,"34","Semester"
-"4","Augsburg CGEE: Social Work in a Latin American Context","Cuernavaca","Mexico","North America","45","57","34",75,93,"57","Semester"
-"5","Augsburg CGEE: Student Teaching in Mexico","Cuernavaca","Mexico","North America","45","57","34",75,93,"57","Semester"
-"6","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Derry","United Kingdom","Europe","60","71","49",72,80,"63","J-term"
-"7","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Londonderry","United Kingdom","Europe","60","71","49",72,80,"63","J-term"
-"8","Barcelona SAE: Academic Study Center (SIS) Semester Program","Barcelona","Spain","Europe","60","71","49",82,93,"70","Semester"
-"9","Barcelona SAE: Academic Study Center (SIS) Semester Program with Internship","Barcelona","Spain","Europe","60","71","49",82,93,"70","Semester"
-"10","Budapest Semesters in Mathematics","Budapest","Hungary","Europe","60","71","49",53,64,"43","Semester"
-"11","Budapest Semesters in Mathematics Education","Budapest","Hungary","Europe","60","71","49",53,64,"43","Semester"
-"12","CEA CAPA: Study and Intern in Sydney","Sydney","Australia","Oceania","44","48","45",77,90,"64","Semester"
-"13","CEA CAPA: University of Technology Sydney","Sydney","Australia","Oceania","44","48","45",77,90,"64","Semester"
-"14","CET Colombia: Study Abroad","Cali","Colombia","South America","60","73","48",73,95,"52","Semester"
-"15","CIEE Arts and Sciences Program in Cape Town, South Africa","Cape Town","South Africa","Africa","25","28","20",71,84,"58","Semester"
-"16","CIEE Liberal Arts Program in Rennes, France","Rennes","France","Europe","60","71","49",77,90,"65","Semester"
-"17","CMRS Oxford Humanities Program, Oxford, England","Oxford","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"18","Carleton Global Engagement: Ecology and Anthropology in Tanzania","Arusha","Tanzania","Africa","25","28","20",13,8,"18","Semester"
-"19","Chicago Semester: Student Teaching and Seminar","Chicago, Illinois","United States","North America","45","57","34",74,86,"62","Semester"
-"20","Classical Studies in Greece","Archaia Olympia","Greece","Europe","60","71","49",69,93,"45","J-term"
-"21","Classical Studies in Greece","Athens","Greece","Europe","60","71","49",69,93,"45","J-term"
-"22","Classical Studies in Greece","Delphi","Greece","Europe","60","71","49",69,93,"45","J-term"
-"23","Classical Studies in Greece","Heraklion","Greece","Europe","60","71","49",69,93,"45","J-term"
-"24","Classical Studies in Greece","Kalabaka","Greece","Europe","60","71","49",69,93,"45","J-term"
-"25","Classical Studies in Greece","Nafplion","Greece","Europe","60","71","49",69,93,"45","J-term"
-"26","Classical Studies in Greece","Pilos","Greece","Europe","60","71","49",69,93,"45","J-term"
-"27","Classical Studies in Greece","Piraeus","Greece","Europe","60","71","49",69,93,"45","J-term"
-"28","Classical Studies in Greece","Sparti","Greece","Europe","60","71","49",69,93,"45","J-term"
-"29","Classical Studies in Greece","Thessaloniki","Greece","Europe","60","71","49",69,93,"45","J-term"
-"30","College Year in Athens, Greece","Athens","Greece","Europe","60","71","49",69,93,"45","Semester"
-"31","DIS Copenhagen","Copenhagen","Denmark","Europe","60","71","49",86,92,"80","Semester"
-"32","DIS Stockholm","Stockholm","Sweden","Europe","60","71","49",76,80,"71","Semester"
-"33","Dance NOW/NY Interim Experience","New York City, New York","United States","North America","45","57","34",74,86,"62","J-term"
-"34","Encountering China: Shanghai","Hangzhou","China","Asia","33","36","30",48,51,"45","J-term"
-"35","Encountering China: Shanghai","Nanjing","China","Asia","33","36","30",48,51,"45","J-term"
-"36","Encountering China: Shanghai","Shanghai","China","Asia","33","36","30",48,51,"45","J-term"
-"37","Encountering Japan: Tokyo","Hiroshima","Japan","Asia","33","36","30",63,70,"56","J-term"
-"38","Encountering Japan: Tokyo","Tokyo","Japan","Asia","33","36","30",63,70,"56","J-term"
-"39","Environmental Science in Australia and New Zealand","Auckland","New Zealand","Oceania","44","48","45",79,94,"64","Semester"
-"40","Environmental Science in Australia and New Zealand","Brisbane","Australia","Oceania","44","48","45",77,90,"64","Semester"
-"41","Environmental Science in Australia and New Zealand","Melbourne","Australia","Oceania","44","48","45",77,90,"64","Semester"
-"42","Environmental Science in Australia and New Zealand","Rotorua","New Zealand","Oceania","44","48","45",79,94,"64","Semester"
-"43","Environmental Science in Australia and New Zealand","Sydney","Australia","Oceania","44","48","45",77,90,"64","Semester"
-"44","Environmental Science in Australia and New Zealand","Wellington","New Zealand","Oceania","44","48","45",79,94,"64","Semester"
-"45","Gender Equality in Norway","Bergen","Norway","Europe","60","71","49",86,85,"88","J-term"
-"46","Gender Equality in Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","J-term"
-"47","Global Semester","Ho Chi Minh City","Vietnam","Asia","33","36","30",54,58,"49","Semester"
-"48","Global Semester","Johannesburg","South Africa","Africa","25","28","20",71,84,"58","Semester"
-"49","Global Semester","Quito","Ecuador","South America","60","73","48",58,78,"37","Semester"
-"50","Global Semester","Windhoek","Namibia","Africa","25","28","20",40,46,"34","Semester"
-"51","Harris Manchester College, Oxford, England","Oxford","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"52","Hokusei Gakuen University Semester","Sapporo","Japan","Asia","33","36","30",63,70,"56","Semester"
-"53","IES Abroad London - Health Practice & Policy","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"54","IES Abroad London - Study London","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"55","IES Abroad London - Theater Studies","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"56","IES Abroad London Direct Enrollment – Queen Mary, University of London","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"57","IES Abroad Milan - Business Studies","Milan","Italy","Europe","60","71","49",71,79,"63","Semester"
-"58","IES Abroad Milan - Fashion Design & Merchandising","Milan","Italy","Europe","60","71","49",71,79,"63","Semester"
-"59","IES Abroad Milan - Italy Today","Milan","Italy","Europe","60","71","49",71,79,"63","Semester"
-"60","IES Abroad Milan - Music: Voice, Composition & Instrumental","Milan","Italy","Europe","60","71","49",71,79,"63","Semester"
-"61","IES Abroad Paris - French Studies","Paris","France","Europe","60","71","49",77,90,"65","Semester"
-"62","Interdisciplinary French Studies in Paris","Paris","France","Europe","60","71","49",77,90,"65","J-term"
-"63","Japan Studies, Waseda University, Tokyo, Japan","Tokyo","Japan","Asia","33","36","30",63,70,"56","Semester"
-"64","Lancaster University, England","Lancaster","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"65","Liberal Arts Program, Seville, Spain","Seville","Spain","Europe","60","71","49",82,93,"70","Semester"
-"66","Living Faith: Theology and Practice at Holden Village","Chelan, Washington","United States","North America","45","57","34",74,86,"62","J-term"
-"67","London School of Economics and Political Science, London, England","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"68","Lutheran College Washington Semester","Washington, D.C.","United States","North America","45","57","34",74,86,"62","Semester"
-"69","Middlebury in Mainz, Germany","Mainz","Germany","Europe","60","71","49",81,95,"66","Semester"
-"70","Middlebury in Yaoundé, Cameroon","Yaounde","Cameroon","Africa","25","28","20",8,6,"11","Semester"
-"71","NUPACE Program, Nagoya, Japan","Nagoya","Japan","Asia","33","36","30",63,70,"56","Semester"
-"72","National Student Exchange (NSE): Canada","Various Cities","Canada","North America","45","57","34",81,95,"66","Semester"
-"73","National Student Exchange (NSE): U.S. and Territories","Various Cities","United States","North America","45","57","34",74,86,"62","Semester"
-"74","Number Theory - Budapest","Budapest","Hungary","Europe","60","71","49",53,64,"43","J-term"
-"75","O'Keeffe and Arts of New Mexico","Abiquiu","United States","North America","45","57","34",74,86,"62","Semester"
-"76","O'Keeffe and Arts of New Mexico","Albuquerque","United States","North America","45","57","34",74,86,"62","Semester"
-"77","O'Keeffe and Arts of New Mexico","Santa Fe","United States","North America","45","57","34",74,86,"62","Semester"
-"78","O'Keeffe and Arts of New Mexico","Taos","United States","North America","45","57","34",74,86,"62","Semester"
-"79","Oregon Extension, Ashland, OR","Ashland, Oregon","United States","North America","45","57","34",74,86,"62","Semester"
-"80","Oslo International Summer School, Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","Semester"
-"81","Perspectives on Flamenco in Spain","Cordoba","Spain","Europe","60","71","49",82,93,"70","J-term"
-"82","Perspectives on Flamenco in Spain","Granada","Spain","Europe","60","71","49",82,93,"70","J-term"
-"83","Perspectives on Flamenco in Spain","Madrid","Spain","Europe","60","71","49",82,93,"70","J-term"
-"84","Perspectives on Flamenco in Spain","Seville","Spain","Europe","60","71","49",82,93,"70","J-term"
-"85","Politics and Environment in Puerto Rico","Lajas","Puerto Rico","North America","45","57","34",NA,NA,NA,"J-term"
-"86","Reformations in Germany and Spain","Barcelona","Spain","Europe","60","71","49",82,93,"70","J-term"
-"87","Reformations in Germany and Spain","Berlin","Germany","Europe","60","71","49",81,95,"66","J-term"
-"88","Reformations in Germany and Spain","Granada","Spain","Europe","60","71","49",82,93,"70","J-term"
-"89","Reformations in Germany and Spain","Madrid","Spain","Europe","60","71","49",82,93,"70","J-term"
-"90","Reformations in Germany and Spain","Wittenberg","Germany","Europe","60","71","49",81,95,"66","J-term"
-"91","SIT Kenya: Global Health and Human Rights","Kisumu","Kenya","Africa","25","28","20",21,25,"17","Semester"
-"92","SIT Mexico: Migration, Borders, and Transnational Communities","Oaxaca","Mexico","North America","45","57","34",75,93,"57","J-term"
-"93","SIT Mexico: Migration, Borders, and Transnational Communities","Tucson","United States","North America","45","57","34",74,86,"62","J-term"
-"94","SRAS: Russian as a Second Language, Georgia","Tbilisi","Georgia","Europe","60","71","49",38,64,"12","Semester"
-"95","SRAS: Russian as a Second Language, Kyrgyzstan","Bishkek","Kyrgyzstan","Asia","33","36","30",28,45,"12","Semester"
-"96","SRAS: Russian as a Second Language, Latvia","Riga","Latvia","Europe","60","71","49",51,63,"40","Semester"
-"97","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Flensburg","Germany","Europe","60","71","49",81,95,"66","J-term"
-"98","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Hamburg","Germany","Europe","60","71","49",81,95,"66","J-term"
-"99","Soccer in England","Liverpool","United Kingdom","Europe","60","71","49",72,80,"63","J-term"
-"100","Soccer in England","London","United Kingdom","Europe","60","71","49",72,80,"63","J-term"
-"101","Soccer in England","Manchester","United Kingdom","Europe","60","71","49",72,80,"63","J-term"
-"102","Social Issues in South Africa","Cape Town","South Africa","Africa","25","28","20",71,84,"58","J-term"
-"103","Social Issues in South Africa","Johannesburg","South Africa","Africa","25","28","20",71,84,"58","J-term"
-"104","Student Teaching, Kodaikanal Int'l School, India","Kodaikanal","India","Asia","33","36","30",60,65,"54","Semester"
-"105","Student Teaching, Woodstock Int'l School, India","Mussoorie","India","Asia","33","36","30",60,65,"54","Semester"
-"106","Term in China","Shanghai","China","Asia","33","36","30",48,51,"45","Semester"
-"107","Term in Taiwan","Taipei","Taiwan","Asia","33","36","30",66,85,"48","Semester"
-"108","The Journey North: Migrations To, From, and Within Norway","Bodo","Norway","Europe","60","71","49",86,85,"88","J-term"
-"109","The Journey North: Migrations To, From, and Within Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","J-term"
-"110","The Journey North: Migrations To, From, and Within Norway","Snasa","Norway","Europe","60","71","49",86,85,"88","J-term"
-"111","The Journey North: Migrations To, From, and Within Norway","Stavanger","Norway","Europe","60","71","49",86,85,"88","J-term"
-"112","The Journey North: Migrations To, From, and Within Norway","Trondheim","Norway","Europe","60","71","49",86,85,"88","J-term"
-"113","Theater in London","London","United Kingdom","Europe","60","71","49",72,80,"63","J-term"
-"114","Theater in London","Stratford-upon-Avon","United Kingdom","Europe","60","71","49",72,80,"63","J-term"
-"115","Trinity College, Dublin, Ireland","Dublin","Ireland","Europe","60","71","49",76,86,"65","Semester"
-"116","University College Dublin, Ireland","Dublin","Ireland","Europe","60","71","49",76,86,"65","Semester"
-"117","University of Aberdeen, Scotland","Aberdeen","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"118","University of Dundee, Scotland","Dundee","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"119","University of East Anglia, England","Norwich","United Kingdom","Europe","60","71","49",72,80,"63","Semester"
-"120","University of Galway, Ireland","Galway","Ireland","Europe","60","71","49",76,86,"65","Semester"
-"121","University of Konstanz, Germany","Konstanz","Germany","Europe","60","71","49",81,95,"66","Semester"
-"122","University of Oslo, Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","Semester"
-"123","University of Otago, Dunedin, New Zealand","Dunedin","New Zealand","Oceania","44","48","45",79,94,"64","Semester"
-"124","University of Southeastern Norway","Telemark","Norway","Europe","60","71","49",86,85,"88","Semester"
-"125","Urban Schools and Communities","Northfield, MN","United States","North America","45","57","34",74,86,"62","J-term"
-"126","Urban Schools and Communities","Saint Paul","United States","North America","45","57","34",74,86,"62","J-term"
-"127","Washington D.C. Politics and Intl Relations Practicum","Washington, D.C.","United States","North America","45","57","34",74,86,"62","J-term"
-"128","Webster University in Vienna","Vienna","Austria","Europe","60","71","49",77,88,"66","Semester"
-"129","World Courts in Europe","Geneva","Switzerland","Europe","60","71","49",69,75,"64","Semester"
-"130","World Courts in Europe","Luxembourg","Luxembourg","Europe","60","71","49",77,82,"73","Semester"
-"131","World Courts in Europe","Strasbourg","France","Europe","60","71","49",77,90,"65","Semester"
-"132","World Courts in Europe","The Hague","Netherlands","Europe","60","71","49",81,90,"72","Semester"
-"133","Yonsei University, Seoul, South Korea","Seoul","South Korea","Asia","33","36","30",46,48,"45","Semester"
+"","program_name","city","country","region","equality_cont","legal_cont","po_cont","equality_index","legal_index","public_opinion_index","duration","detected_subject"
+"1","Arts and Sciences in Legon, Ghana","Legon","Ghana","Africa","25","29","20",7,5,"9","Semester","science"
+"2","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Cape Town","South Africa","Africa","25","29","20",71,84,"58","Semester","environment"
+"3","Augsburg CGEE: Decolonizing the Mind: Racial and Environmental Justice","Windhoek","Namibia","Africa","25","29","20",44,55,"34","Semester","environment"
+"4","Augsburg CGEE: Social Work in a Latin American Context","Cuernavaca","Mexico","North America","45","57","34",75,93,"57","Semester","social work"
+"5","Augsburg CGEE: Student Teaching in Mexico","Cuernavaca","Mexico","North America","45","57","34",75,93,"57","Semester","teaching"
+"6","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Derry","United Kingdom","Europe","60","71","49",72,80,"63","J-term",NA
+"7","Augsburg CGEE:Conflict, Peace, and Transition in Northern Ireland","Londonderry","United Kingdom","Europe","60","71","49",72,80,"63","J-term",NA
+"8","Barcelona SAE: Academic Study Center (SIS) Semester Program","Barcelona","Spain","Europe","60","71","49",82,93,"70","Semester",NA
+"9","Barcelona SAE: Academic Study Center (SIS) Semester Program with Internship","Barcelona","Spain","Europe","60","71","49",82,93,"70","Semester",NA
+"10","Budapest Semesters in Mathematics","Budapest","Hungary","Europe","60","71","49",53,64,"43","Semester","math"
+"11","Budapest Semesters in Mathematics Education","Budapest","Hungary","Europe","60","71","49",53,64,"43","Semester","math"
+"12","CEA CAPA: Study and Intern in Sydney","Sydney","Australia","Oceania","44","48","45",77,90,"64","Semester",NA
+"13","CEA CAPA: University of Technology Sydney","Sydney","Australia","Oceania","44","48","45",77,90,"64","Semester",NA
+"14","CET Colombia: Study Abroad","Cali","Colombia","South America","60","73","48",73,95,"52","Semester",NA
+"15","CIEE Arts and Sciences Program in Cape Town, South Africa","Cape Town","South Africa","Africa","25","29","20",71,84,"58","Semester","science"
+"16","CIEE Liberal Arts Program in Rennes, France","Rennes","France","Europe","60","71","49",77,90,"65","Semester","art"
+"17","CMRS Oxford Humanities Program, Oxford, England","Oxford","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"18","Carleton Global Engagement: Ecology and Anthropology in Tanzania","Arusha","Tanzania","Africa","25","29","20",13,8,"18","Semester",NA
+"19","Chicago Semester: Student Teaching and Seminar","Chicago, Illinois","United States","North America","45","57","34",74,86,"62","Semester","teaching"
+"20","Classical Studies in Greece","Archaia Olympia","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"21","Classical Studies in Greece","Athens","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"22","Classical Studies in Greece","Delphi","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"23","Classical Studies in Greece","Heraklion","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"24","Classical Studies in Greece","Kalabaka","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"25","Classical Studies in Greece","Nafplion","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"26","Classical Studies in Greece","Pilos","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"27","Classical Studies in Greece","Piraeus","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"28","Classical Studies in Greece","Sparti","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"29","Classical Studies in Greece","Thessaloniki","Greece","Europe","60","71","49",69,93,"45","J-term","classic"
+"30","College Year in Athens, Greece","Athens","Greece","Europe","60","71","49",69,93,"45","Semester",NA
+"31","DIS Copenhagen","Copenhagen","Denmark","Europe","60","71","49",86,92,"80","Semester",NA
+"32","DIS Stockholm","Stockholm","Sweden","Europe","60","71","49",76,80,"71","Semester",NA
+"33","Dance NOW/NY Interim Experience","New York City, New York","United States","North America","45","57","34",74,86,"62","J-term","dance"
+"34","Encountering China: Shanghai","Hangzhou","China","Asia","33","36","30",48,51,"45","J-term",NA
+"35","Encountering China: Shanghai","Nanjing","China","Asia","33","36","30",48,51,"45","J-term",NA
+"36","Encountering China: Shanghai","Shanghai","China","Asia","33","36","30",48,51,"45","J-term",NA
+"37","Encountering Japan: Tokyo","Hiroshima","Japan","Asia","33","36","30",63,70,"56","J-term",NA
+"38","Encountering Japan: Tokyo","Tokyo","Japan","Asia","33","36","30",63,70,"56","J-term",NA
+"39","Environmental Science in Australia and New Zealand","Auckland","New Zealand","Oceania","44","48","45",79,94,"64","Semester","science"
+"40","Environmental Science in Australia and New Zealand","Brisbane","Australia","Oceania","44","48","45",77,90,"64","Semester","science"
+"41","Environmental Science in Australia and New Zealand","Melbourne","Australia","Oceania","44","48","45",77,90,"64","Semester","science"
+"42","Environmental Science in Australia and New Zealand","Rotorua","New Zealand","Oceania","44","48","45",79,94,"64","Semester","science"
+"43","Environmental Science in Australia and New Zealand","Sydney","Australia","Oceania","44","48","45",77,90,"64","Semester","science"
+"44","Environmental Science in Australia and New Zealand","Wellington","New Zealand","Oceania","44","48","45",79,94,"64","Semester","science"
+"45","Gender Equality in Norway","Bergen","Norway","Europe","60","71","49",86,85,"88","J-term",NA
+"46","Gender Equality in Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","J-term",NA
+"47","Global Semester","Ho Chi Minh City","Vietnam","Asia","33","36","30",54,58,"49","Semester",NA
+"48","Global Semester","Johannesburg","South Africa","Africa","25","29","20",71,84,"58","Semester",NA
+"49","Global Semester","Quito","Ecuador","South America","60","73","48",58,78,"37","Semester",NA
+"50","Global Semester","Windhoek","Namibia","Africa","25","29","20",44,55,"34","Semester",NA
+"51","Harris Manchester College, Oxford, England","Oxford","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"52","Hokusei Gakuen University Semester","Sapporo","Japan","Asia","33","36","30",63,70,"56","Semester",NA
+"53","IES Abroad London - Health Practice & Policy","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"54","IES Abroad London - Study London","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"55","IES Abroad London - Theater Studies","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester","theater"
+"56","IES Abroad London Direct Enrollment – Queen Mary, University of London","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"57","IES Abroad Milan - Business Studies","Milan","Italy","Europe","60","71","49",71,79,"63","Semester",NA
+"58","IES Abroad Milan - Fashion Design & Merchandising","Milan","Italy","Europe","60","71","49",71,79,"63","Semester",NA
+"59","IES Abroad Milan - Italy Today","Milan","Italy","Europe","60","71","49",71,79,"63","Semester",NA
+"60","IES Abroad Milan - Music: Voice, Composition & Instrumental","Milan","Italy","Europe","60","71","49",71,79,"63","Semester","music"
+"61","IES Abroad Paris - French Studies","Paris","France","Europe","60","71","49",77,90,"65","Semester",NA
+"62","Interdisciplinary French Studies in Paris","Paris","France","Europe","60","71","49",77,90,"65","J-term",NA
+"63","Japan Studies, Waseda University, Tokyo, Japan","Tokyo","Japan","Asia","33","36","30",63,70,"56","Semester",NA
+"64","Lancaster University, England","Lancaster","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"65","Liberal Arts Program, Seville, Spain","Seville","Spain","Europe","60","71","49",82,93,"70","Semester","art"
+"66","Living Faith: Theology and Practice at Holden Village","Chelan, Washington","United States","North America","45","57","34",74,86,"62","J-term",NA
+"67","London School of Economics and Political Science, London, England","London","United Kingdom","Europe","60","71","49",72,80,"63","Semester","science"
+"68","Lutheran College Washington Semester","Washington, D.C.","United States","North America","45","57","34",74,86,"62","Semester",NA
+"69","Middlebury in Mainz, Germany","Mainz","Germany","Europe","60","71","49",81,95,"66","Semester",NA
+"70","Middlebury in Yaoundé, Cameroon","Yaounde","Cameroon","Africa","25","29","20",8,6,"11","Semester",NA
+"71","NUPACE Program, Nagoya, Japan","Nagoya","Japan","Asia","33","36","30",63,70,"56","Semester",NA
+"72","National Student Exchange (NSE): Canada","Various Cities","Canada","North America","45","57","34",81,95,"66","Semester",NA
+"73","National Student Exchange (NSE): U.S. and Territories","Various Cities","United States","North America","45","57","34",74,86,"62","Semester",NA
+"74","Number Theory - Budapest","Budapest","Hungary","Europe","60","71","49",53,64,"43","J-term",NA
+"75","O'Keeffe and Arts of New Mexico","Abiquiu","United States","North America","45","57","34",74,86,"62","Semester","art"
+"76","O'Keeffe and Arts of New Mexico","Albuquerque","United States","North America","45","57","34",74,86,"62","Semester","art"
+"77","O'Keeffe and Arts of New Mexico","Santa Fe","United States","North America","45","57","34",74,86,"62","Semester","art"
+"78","O'Keeffe and Arts of New Mexico","Taos","United States","North America","45","57","34",74,86,"62","Semester","art"
+"79","Oregon Extension, Ashland, OR","Ashland, Oregon","United States","North America","45","57","34",74,86,"62","Semester",NA
+"80","Oslo International Summer School, Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","Semester",NA
+"81","Perspectives on Flamenco in Spain","Cordoba","Spain","Europe","60","71","49",82,93,"70","J-term",NA
+"82","Perspectives on Flamenco in Spain","Granada","Spain","Europe","60","71","49",82,93,"70","J-term",NA
+"83","Perspectives on Flamenco in Spain","Madrid","Spain","Europe","60","71","49",82,93,"70","J-term",NA
+"84","Perspectives on Flamenco in Spain","Seville","Spain","Europe","60","71","49",82,93,"70","J-term",NA
+"85","Politics and Environment in Puerto Rico","Lajas","Puerto Rico","North America","45","57","34",NA,NA,NA,"J-term","environment"
+"86","Reformations in Germany and Spain","Barcelona","Spain","Europe","60","71","49",82,93,"70","J-term",NA
+"87","Reformations in Germany and Spain","Berlin","Germany","Europe","60","71","49",81,95,"66","J-term",NA
+"88","Reformations in Germany and Spain","Granada","Spain","Europe","60","71","49",82,93,"70","J-term",NA
+"89","Reformations in Germany and Spain","Madrid","Spain","Europe","60","71","49",82,93,"70","J-term",NA
+"90","Reformations in Germany and Spain","Wittenberg","Germany","Europe","60","71","49",81,95,"66","J-term",NA
+"91","SIT Kenya: Global Health and Human Rights","Kisumu","Kenya","Africa","25","29","20",21,25,"17","Semester",NA
+"92","SIT Mexico: Migration, Borders, and Transnational Communities","Oaxaca","Mexico","North America","45","57","34",75,93,"57","J-term",NA
+"93","SIT Mexico: Migration, Borders, and Transnational Communities","Tucson","United States","North America","45","57","34",74,86,"62","J-term",NA
+"94","SRAS: Russian as a Second Language, Georgia","Tbilisi","Georgia","Europe","60","71","49",38,64,"12","Semester",NA
+"95","SRAS: Russian as a Second Language, Kyrgyzstan","Bishkek","Kyrgyzstan","Asia","33","36","30",28,45,"12","Semester",NA
+"96","SRAS: Russian as a Second Language, Latvia","Riga","Latvia","Europe","60","71","49",51,63,"40","Semester",NA
+"97","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Flensburg","Germany","Europe","60","71","49",81,95,"66","J-term",NA
+"98","Shifting Borders: Mapping Linguistic Landscapes of Northern Germany","Hamburg","Germany","Europe","60","71","49",81,95,"66","J-term",NA
+"99","Soccer in England","Liverpool","United Kingdom","Europe","60","71","49",72,80,"63","J-term",NA
+"100","Soccer in England","London","United Kingdom","Europe","60","71","49",72,80,"63","J-term",NA
+"101","Soccer in England","Manchester","United Kingdom","Europe","60","71","49",72,80,"63","J-term",NA
+"102","Social Issues in South Africa","Cape Town","South Africa","Africa","25","29","20",71,84,"58","J-term",NA
+"103","Social Issues in South Africa","Johannesburg","South Africa","Africa","25","29","20",71,84,"58","J-term",NA
+"104","Student Teaching, Kodaikanal Int'l School, India","Kodaikanal","India","Asia","33","36","30",60,65,"54","Semester","teaching"
+"105","Student Teaching, Woodstock Int'l School, India","Mussoorie","India","Asia","33","36","30",60,65,"54","Semester","teaching"
+"106","Term in China","Shanghai","China","Asia","33","36","30",48,51,"45","Semester",NA
+"107","Term in Taiwan","Taipei","Taiwan","Asia","33","36","30",66,85,"48","Semester",NA
+"108","The Journey North: Migrations To, From, and Within Norway","Bodo","Norway","Europe","60","71","49",86,85,"88","J-term",NA
+"109","The Journey North: Migrations To, From, and Within Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","J-term",NA
+"110","The Journey North: Migrations To, From, and Within Norway","Snasa","Norway","Europe","60","71","49",86,85,"88","J-term",NA
+"111","The Journey North: Migrations To, From, and Within Norway","Stavanger","Norway","Europe","60","71","49",86,85,"88","J-term",NA
+"112","The Journey North: Migrations To, From, and Within Norway","Trondheim","Norway","Europe","60","71","49",86,85,"88","J-term",NA
+"113","Theater in London","London","United Kingdom","Europe","60","71","49",72,80,"63","J-term","theater"
+"114","Theater in London","Stratford-upon-Avon","United Kingdom","Europe","60","71","49",72,80,"63","J-term","theater"
+"115","Trinity College, Dublin, Ireland","Dublin","Ireland","Europe","60","71","49",76,86,"65","Semester",NA
+"116","University College Dublin, Ireland","Dublin","Ireland","Europe","60","71","49",76,86,"65","Semester",NA
+"117","University of Aberdeen, Scotland","Aberdeen","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"118","University of Dundee, Scotland","Dundee","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"119","University of East Anglia, England","Norwich","United Kingdom","Europe","60","71","49",72,80,"63","Semester",NA
+"120","University of Galway, Ireland","Galway","Ireland","Europe","60","71","49",76,86,"65","Semester",NA
+"121","University of Konstanz, Germany","Konstanz","Germany","Europe","60","71","49",81,95,"66","Semester",NA
+"122","University of Oslo, Norway","Oslo","Norway","Europe","60","71","49",86,85,"88","Semester",NA
+"123","University of Otago, Dunedin, New Zealand","Dunedin","New Zealand","Oceania","44","48","45",79,94,"64","Semester",NA
+"124","University of Southeastern Norway","Telemark","Norway","Europe","60","71","49",86,85,"88","Semester",NA
+"125","Urban Schools and Communities","Northfield, MN","United States","North America","45","57","34",74,86,"62","J-term",NA
+"126","Urban Schools and Communities","Saint Paul","United States","North America","45","57","34",74,86,"62","J-term",NA
+"127","Washington D.C. Politics and Intl Relations Practicum","Washington, D.C.","United States","North America","45","57","34",74,86,"62","J-term",NA
+"128","Webster University in Vienna","Vienna","Austria","Europe","60","71","49",77,88,"66","Semester",NA
+"129","World Courts in Europe","Geneva","Switzerland","Europe","60","71","49",69,75,"64","Semester",NA
+"130","World Courts in Europe","Luxembourg","Luxembourg","Europe","60","71","49",77,82,"73","Semester",NA
+"131","World Courts in Europe","Strasbourg","France","Europe","60","71","49",77,90,"65","Semester",NA
+"132","World Courts in Europe","The Hague","Netherlands","Europe","60","71","49",81,90,"72","Semester",NA
+"133","Yonsei University, Seoul, South Korea","Seoul","South Korea","Asia","33","36","30",46,48,"45","Semester",NA

@@ -1,5 +1,5 @@
 ---
-title: "Equality & Study Abroad"
+title: "LGBTQ+ Equality & Study Abroad"
 runtime: shiny
 output: 
   flexdashboard::flex_dashboard:
@@ -71,7 +71,7 @@ Equality by Program
 Column
 -------------------------
 ```{r, echo=FALSE}
-renderPlot({
+renderHighchart({
 highchart() %>%
   hc_add_series_map(
     worldgeojson, studyabroad, value = "equality_index", joinBy = c('name','country'),
@@ -83,31 +83,7 @@ highchart() %>%
 })
 ```
 
-Inputs {.sidebar}
--------------------------
-```{r, echo=FALSE}
-inputPanel(
-  radioButtons("index", "Choose Index:", 
-             choices = list("General Equality Index" = "equality_index",
-                            "Legal Index" = "legal_index",
-                            "Public Opinion Index" = "public_opinion_index"),
-             selected = "equality_index")
-)
-```
 
-
-Column 
--------------------------
-```{r}
-renderPlot({
-  studyabroad |>
-    group_by(country) |>
-    summarize(n = n()) |>
-  mutate(country = fct_reorder(country, n)) |>
-    ggplot(aes(x = as.numeric(input$index), y = n)) +
-    geom_line()
-})
-```
 
 
 St. Olaf Study Abroad
@@ -119,7 +95,13 @@ Inputs {.sidebar}
 inputPanel(
   
   sliderInput("num_adjust", label = "Number of Countries:",
-              min = 5, max = 20, value = 1, step = 1)
+              min = 5, max = 20, value = 1, step = 1),
+)
+
+inputPanel(
+    selectInput("subject", "Choose Subject:",
+            choices = c("math", "science", "environment", "art", "history", "dance", "social work", "classic", "theater", "music", "economics", "teaching"),
+            selected = "math")
 )
 ```
 
@@ -138,6 +120,17 @@ renderPlot(studyabroad |>
   theme(axis.text.x = element_text(angle = 90)) +
   labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Visited Destinations"))
 ```
+
+```{r}
+renderPlot({studyabroad |>
+            filter(detected_subject == "math") |>
+             group_by(region) |>
+             summarize(n = n()) |>
+             ggplot(aes(x = region, y = n)) +
+             geom_col()
+  })
+```
+
 
 Column 
 -------------------------
