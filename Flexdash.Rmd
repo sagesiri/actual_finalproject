@@ -241,7 +241,9 @@ tract_data <- reactive({
 })
 ```
 
+This plot shows us not only the countries available for the upcoming school year, but how each of these rank based on our three equality metrics. 
 
+Western Europe is consistently the most accepting with the highest ranking in the world being Norway, but this tolerance seems to drop the further east we travel. The continent of Africa has the lowest ratings, with a score of just 7 coming from Ghana. Southeast Asia is the most middle-of-the-road region with India being towards the higher percentile, but China having a lower than average score. However, these values do not necessarily reflect the quality of the study abroad programs, and are a general overview of the countries as a whole. Typically the locations of these opportunities are capital cities or other more tolerant areas of their respective nations. 
 
 ```{r, echo=FALSE}
 #renderPlot({
@@ -261,14 +263,61 @@ tract_data <- reactive({
 St. Olaf Study Abroad
 ==========================
 
-Inputs {.sidebar}
+These two halves of the screen showcase two different ideas. 
+
+On the left we have a ranking of the most common countries offered to St. Olaf students. Unsurprisingly, the UK and the US are at the top with other English speaking countries not too far from the top as well like Australia and South Africa. 
+
+Meanwhile on the right, we have each program sectioned off into the different subjects they represent. Students majoring in a natural science field clearly have no shortage of opportunities available to them next year, while others may only have one country/program open to them for travel. Among these are Math, Dance, and Social Work to name a few. 
+
+
+Column 
 -------------------------
-```{r, echo=FALSE}
+
+```{r, echo = FALSE}
+renderPlot(studyabroad |>
+  group_by(country) |>
+  summarize(n = n()) |>
+  mutate(country = fct_reorder(country, n)) |>
+  slice_max(country, n = as.numeric(input$num_adjust)) |>
+  ggplot(aes(x = country, y = n)) +
+  geom_col(fill = "goldenrod2") +
+  theme(axis.text.x = element_text(angle = 90)) +
+  labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Visited Destinations"))
+
 inputPanel(
   
   sliderInput("num_adjust", label = "Number of Countries:",
               min = 5, max = 20, value = 1, step = 1),
 )
+```
+
+```{r, echo = FALSE}
+renderDataTable({
+    studyabroad |>
+    as_tibble() |>
+      group_by(country) |>
+      summarize(n = n()) |>
+      mutate(country = fct_reorder(country, n)) |>
+      slice_max(country, n = as.numeric(input$num_adjust)) |>
+    rename(`Number of Programs` = n,
+           Country = country)
+})
+```
+
+Column
+-------------------------
+
+
+```{r}
+renderPlot({studyabroad |>
+            filter(detected_subject == input$subject) |>
+             group_by(country) |>
+             summarize(n = n()) |>
+             ggplot(aes(x = country, y = n)) +
+             geom_col(fill = "deeppink1") +
+    labs(title = "Program Locations by Subject", x = "Country", y = "Number of Programs")
+  })
+
 
 inputPanel(
     selectInput("subject", "Choose Subject:",
@@ -285,46 +334,6 @@ inputPanel(
                         "Education/Student Teaching" = "teaching"),
             selected = "science")
 )
-```
-
-
-Column 
--------------------------
-
-```{r, echo = FALSE}
-renderPlot(studyabroad |>
-  group_by(country) |>
-  summarize(n = n()) |>
-  mutate(country = fct_reorder(country, n)) |>
-  slice_max(country, n = as.numeric(input$num_adjust)) |>
-  ggplot(aes(x = country, y = n)) +
-  geom_col(fill = "red") +
-  theme(axis.text.x = element_text(angle = 90)) +
-  labs(x = "Country", y = "Num Occurrences", title = "Most Frequently Visited Destinations"))
-```
-
-```{r, echo = FALSE}
-renderDataTable({
-    studyabroad |>
-    as_tibble() |>
-      group_by(country) |>
-      summarize(n = n()) |>
-      mutate(country = fct_reorder(country, n)) |>
-      slice_max(country, n = as.numeric(input$num_adjust)) |>
-    rename(`Number of Programs` = n,
-           Country = country)
-})
-```
-
-```{r}
-renderPlot({studyabroad |>
-            filter(detected_subject == input$subject) |>
-             group_by(country) |>
-             summarize(n = n()) |>
-             ggplot(aes(x = country, y = n)) +
-             geom_col(fill = "skyblue") +
-    labs(title = "Program Locations by Subject", x = "Country", y = "Number of Programs")
-  })
 ```
 
 Global Equality
