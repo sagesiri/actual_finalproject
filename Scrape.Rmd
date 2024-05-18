@@ -89,14 +89,14 @@ equality$country <- str_replace_all(equality$country, "([a-z]+)([A-Z])", "\\1 \\
 ```{r}
 continent <- rbind(colnames(continent), continent)
 colnames(continent) <- c("cont", "equality_cont", "legal_cont", "po_cont")
-continent$cont <- str_remove_all(continent$cont, "\\d.*")
+continent$cont <- str_remove_all(continent$cont, " \\d.*")
 ```
 
 ```{r}
 studyabroad <- studyabroad |>
+  inner_join(continent, join_by(region == cont)) |>
   left_join(equality) |>
-  left_join(studyabroad_t) |>
-  left_join(continent, join_by(region == cont))
+  left_join(studyabroad_t)
 ```
 
 
