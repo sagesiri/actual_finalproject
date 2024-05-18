@@ -281,7 +281,7 @@ inputPanel(
                         "Classical Studies" = "classic", 
                         "Theater" = "theater", 
                         "Music" = "music", 
-                        "Economics" = "economics", 
+                        "Economics" = "econ", 
                         "Education/Student Teaching" = "teaching"),
             selected = "science")
 )
@@ -469,6 +469,20 @@ shinyApp(ui = dashboardPage(
 ), server)
 ```
 
+Conclusions
+==========================
 
+#### Pulling It Together
 
+The process of aggregating this data into meaningful and accessible data visualizations took time and effort. As stated in our introduction, we gathered the majority of our data from scraping a website called [Equaldex](https://www.equaldex.com/equality-index). Our study abroad information was scraped from the [St. Olaf Smith Center](https://stolaf.studioabroad.com/index.cfm?FuseAction=Programs.SimpleSearch). Yet, by far the most challenging aspect of our entire project was the creation of our map. There are many R packages that can create beautiful maps, but unfortunately none that have the exact interactive comonent that we wanted to include. This left us to struggle with Leaflet to create our final project, which is not a very maleable package, especially in R Shiny.
 
+#### Conclusions
+
+This project aimed to connect LGBTQ+ identifying students to an accessible resource to identify the acceptance levels of study abroad locations. In the process, we learned a lot about how the LGBTQ+ community is received on a global scale, as well as how St. Olaf study abroad programs are distributed throughout the globe.
+
+Our research revealed that the most welcoming study abroad destinations for students through St. Olaf include Canada, Norway, Germany, Spain, Denmark, and the Netherlands. The least acceptance locations include Ghana, Cameroon, Tanzania, and Kenya. However, despite these numbers, the choice to study abroad is ultimately an individual decision. Many factors can influence a students' choice in program, this is simply one of those factors. 
+
+```{r  fig.width = 7, fig.height = 5, fig.align='center'}
+include_graphics("IMG_3423.jpeg") 
+```
+*Image taken by Siri from Budapest, Hungary
